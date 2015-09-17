@@ -1,0 +1,207 @@
+/*style cho grid view*/
+
+.grid-container { font-family:Verdana; font-size:14px; color:Black;}
+.grid-container-560 { font-family:Verdana; font-size:14px; color:#333; width:800px}
+.close-open {margin-bottom:5px;}
+.close-open a {color:#D00000;}
+.close-open a:hover {color:#222;}
+.gridView1 { background:#D5D5D5; border-collapse: separate;}
+.gridView {width:100%; background:#D5D5D5; border-collapse: separate;}
+.gridView th {padding:3px 3px; text-align:center;font-weight:bold;background:url("/images/grid-bg.png") repeat-x scroll 0 -1071px transparent; color:#021AFD;}
+.gridView th a{ text-decoration:none; color:#942F08; display:block; padding-right:2px; }
+.gridView th a:hover{color:#082977;}
+.gridView th a span{width:16px; height:16px; float:right;}
+.gridView th a.asc span {display:block; background:url("/Images/gridview/icon.png") no-repeat scroll left -1194px transparent;}
+.gridView th a.desc span {display:block; background:url("/Images/gridview/icon.png") no-repeat scroll left -1151px transparent;}
+.gridView td {padding:3px 1px 3px 3px; background:#fff; border: 0 none;color:Black}
+/*style cho gridview cho the a*/
+.gridView td a, .gridView td a:link, .gridView td a:visited {color:Red;text-decoration: none; }
+.gridView td a:hover {color:#942F08;}
+.gridView td.action a, .gridView td.action a:link,.gridView td.action a:hover, .gridView td.action a:visited{ color:#942F08;padding-left:3px;}
+
+
+
+.gridView .claSTT {width:1%;text-align:center;}
+.gridView th.claSTT {width:1%;text-align:center}
+
+.gridView .claSokihieu {width:12%;text-align:left;}
+.gridView th.claSokihieu {width:12%;text-align:center;}
+.gridView td.claSokihieu a, .gridView td.claSokihieu a:link,.gridView td.claSokihieu a:hover, .gridView td.claSokihieu a:visited{ color:red;text-align:left;}
+
+.gridView .claUsername {width:12%;text-align:left;}
+.gridView th.claUsername {width:12%;text-align:center;}
+.gridView td.claUsername a, .gridView td.claUsername a:link,.gridView td.claUsername a:hover, .gridView td.claUsername a:visited{ color:Black;text-align:left;}
+
+.gridView .claHoten {width:12%;text-align:left;}
+.gridView th.claHoten {width:12%;text-align:center;}
+.gridView td.claHoten a, .gridView td.claHoten a:link,.gridView td.claHoten a:hover, .gridView td.claHoten a:visited{ color:Black;text-align:left;}
+
+.gridView .claTieude {width:30%;text-align:left;}
+.gridView th.claTieude {width:30%;text-align:center;}
+.gridView td.claTieude a, .gridView td.claTieude a:link,.gridView td.claTieude a:hover, .gridView td.claTieude a:visited{ color:Black;text-align:left;}
+
+.gridView .claNoidung {width:30%;text-align:left;}
+.gridView th.claNoidung {width:30%;text-align:center;}
+.gridView td.claNoidung a, .gridView td.claNoidung a:link,.gridView td.claNoidung a:hover, .gridView td.claNoidung a:visited{ color:Black;text-align:left;}
+
+.gridView .claTrichyeu {width:30%;text-align:left;}
+.gridView th.claTrichyeu {width:30%;text-align:center;}
+.gridView td.claTrichyeu a, .gridView td.claTrichyeu a:link,.gridView td.claTrichyeu a:hover, .gridView td.claTrichyeu a:visited{ color:Black;text-align:left;}
+
+.gridView .claNgay {width:9%;text-align:left;}
+.gridView th.claNgay {width:9%;text-align:center;}
+.gridView .claNgay1 {width:16%;text-align:left;}
+.gridView td.claNgay a, .gridView td.claNgay a:link,.gridView td.claNgay a:hover, .gridView td.claNgay a:visited{ color:Black;text-align:left;}
+.gridView td.claNgay1 a, .gridView td.claNgay1 a:link,.gridView td.claNgay1 a:hover, .gridView td.claNgay1 a:visited{ color:Black;text-align:left;}
+
+.gridView .claSC {width:5%;text-align:left;}
+.gridView th.claSC {width:5%;text-align:center;}
+.gridView td.claSC a, .gridView td.claSC a:link,.gridView td.claSC a:hover, .gridView td.claSC a:visited{ color:Black;text-align:left;}
+
+.gridView .claThoigian {width:5%;text-align:left;}
+.gridView th.claThoigian {width:5%;text-align:center;}
+.gridView td.claThoigian a, .gridView td.claThoigian a:link,.gridView td.claThoigian a:hover, .gridView td.claThoigian a:visited{ color:Black;text-align:left;}
+
+.gridView .claDiadiem {width:10%;text-align:left;}
+.gridView th.claDiadiem {width:10%;text-align:center;}
+.gridView td.claDiadiem a, .gridView td.claDiadiem a:link,.gridView td.claDiadiem a:hover, .gridView td.claDiadiem a:visited{ color:Black;text-align:left;}
+
+.gridView .claChutri {width:10%;text-align:left;}
+.gridView th.claChutri {width:10%;text-align:center;}
+.gridView td.claChutri a, .gridView td.claChutri a:link,.gridView td.claChutri a:hover, .gridView td.claChutri a:visited{ color:Black;text-align:left;}
+
+.gridView .claVanphong {width:10%;text-align:left;}
+.gridView th.claVanphong {width:10%;text-align:center;}
+.gridView td.claVanphong a, .gridView td.claVanphong a:link,.gridView td.claVanphong a:hover, .gridView td.claVanphong a:visited{ color:Black;text-align:left;}
+
+.gridView .claChuanbi {width:10%;text-align:left;}
+.gridView th.claChuanbi {width:10%;text-align:center;}
+.gridView td.claChuanbi a, .gridView td.claChuanbi a:link,.gridView td.claChuanbi a:hover, .gridView td.claChuanbi a:visited{ color:Black;text-align:left;}
+
+.gridView .claChucvu {width:14%;text-align:left;}
+.gridView th.claChucvu {width:14%;text-align:center;}
+.gridView td.claChucvu a, .gridView td.claChucvu a:link,.gridView td.claChucvu a:hover, .gridView td.claChucvu a:visited{ color:Black;text-align:left;}
+
+.gridView .claTrangthai {width:10%;text-align:left;}
+.gridView th.claTrangthai {width:10%;text-align:center;}
+.gridView td.claTrangthai a, .gridView td.claTrangthai a:link,.gridView td.claTrangthai a:hover, .gridView td.claTrangthai a:visited{ color:Black;text-align:left;}
+
+.gridView .claSDT {width:4%;text-align:left; }
+.gridView th.claSDT {width:4%;text-align:center;font-size:12px;}
+.gridView td.claSDT a, .gridView td.claSDT a:link,.gridView td.claSDT a:hover, .gridView td.claSDT a:visited{ color:Blue;text-align:center;}
+
+.gridView .claCQbanhanh {width:15%;text-align:left;}
+.gridView th.claCQbanhanh {width:15%;text-align:center;}
+.gridView td.claCQbanhanh a, .gridView td.claCQbanhanh a:link,.gridView td.claCQbanhanh a:hover, .gridView td.claCQbanhanh a:visited{ color:Black;text-align:left;}
+
+.gridView .claCQ {width:12%;text-align:left;}
+.gridView th.claCQ {width:12%;text-align:center;}
+.gridView td.claCQ a, .gridView td.claCQ a:link,.gridView td.claCQ a:hover, .gridView td.claCQ a:visited{ color:Black;text-align:left;}
+
+.gridView .claButphe {width:5%;text-align:center; }
+.gridView th.claButphe {width:5%;text-align:center; }
+.gridView td.claButphe a, .gridView td.claButphe a:link,.gridView td.claButphe a:hover, .gridView td.claButphe a:visited{ color:Blue;text-align:center;}
+
+.gridView .claQuantri {width:12%;text-align:center; }
+.gridView th.claQuantri {width:12%;text-align:center; }
+.gridView td.claQuantri a, .gridView td.claQuantri a:link,.gridView td.claQuantri a:hover, .gridView td.claQuantri a:visited{ color:Blue;text-align:center;}
+
+.gridView .claXuly {width:2%;text-align:center;font-size:11px; }
+.gridView th.claXuly {width:2%;text-align:center;}
+.gridView td.claXuly a, .gridView td.claXuly a:link,.gridView td.claXuly a:hover, .gridView td.claXuly a:visited{ color:Blue;text-align:center;}
+
+.gridView .claSua {width:2%;text-align:center; }
+.gridView th.claSua {width:2%;text-align:center;}
+.gridView td.claSua a, .gridView td.claSua a:link,.gridView td.claSua a:hover, .gridView td.claSua a:visited{ color:Blue;text-align:center;}
+
+.gridView .claXoa {width:2%;text-align:center; }
+.gridView th.claXoa {width:2%;text-align:center; }
+.gridView td.claXoa a, .gridView td.claXoa a:link,.gridView td.claXoa a:hover, .gridView td.claXoa a:visited{ color:Blue;text-align:center;}
+
+.gridView .claGui {width:2%;text-align:center; }
+.gridView th.claGui {width:2%;text-align:center; }
+.gridView td.claGui a, .gridView td.claGui a:link,.gridView td.claGui a:hover, .gridView td.claGui a:visited{ color:Blue;text-align:center;}
+
+.gridView .Daxuly     td{clear: both;color:#942F08;}
+.gridView .Dangxuly   td{clear: both;color:#942F08;}
+.gridView .Chuaxuly   td{clear: both;color:#942F08;}
+.gridView .Quahanxuly td{clear: both;color:#942F08;}
+
+.gridView .odd td {background: #66ffff;}
+.gridView tr:hover td{background:#6699ff;}
+.gridView .hightlight td {background:#FED883 !important;}
+.gridView .hide {display:none;}
+.gridView .show {display:block;}
+.gridView a.group {color:#A52A2A !important; font-weight:bold;  font-size:14px; display:block; padding:0px 5px; float:left;}
+
+.gridHeaderPop
+{
+	background: #33CCFF no-repeat scroll 0 0px;
+	display: block;
+	float: left;
+	height: 25px;
+	width: auto;
+	font-size: 15px;
+	padding-left: 5px;
+	text-transform: uppercase;
+	/*text-shadow: 1px 1px #87D0F9;*/
+	color: #082977;
+	margin: 0 auto;
+	font-weight: bold;
+	padding-top: 5px;
+}
+.content-grid111
+{
+    float: left;
+    width: auto;
+}
+
+.gridViewPop {width:100%; background:#D5D5D5; border-collapse: separate;}
+.gridViewPop th {padding:3px 3px; font-weight:bold;background:url("/Images/gridview/grid-bg.png") repeat-x scroll 0 -1071px transparent; color:#082977;}
+.gridViewPop th a{ text-decoration:none; color:#3B7EB1; display:block; padding-right:12px; }
+.gridViewPop th a:hover{color:#082977;}
+.gridViewPop th a span{width:16px; height:16px; float:right;}
+.gridViewPop th a.asc span {display:block; background:url("/Images/gridview/icon.png") no-repeat scroll left -1194px transparent;}
+.gridViewPop th a.desc span {display:block; background:url("/Images/gridview/icon.png") no-repeat scroll left -1151px transparent;}
+
+.gridViewPop td {padding:3px 1px 3px 3px; background:#fff; border: 0 none;}
+/*.gridViewPop td a, .gridView td a:link, .gridView td a:visited {color:Black;text-decoration: none; }
+*/
+.gridViewPop td.action a, .gridView td.action a:link,.gridView td.action a:hover, .gridView td.action a:visited{ padding-left:3px;}
+.gridViewPop td a:hover {color:#222;}
+.gridViewPop .odd td {background:#fafafa;}
+.gridViewPop tr:hover td{background:#E7F6FD;}
+.gridViewPop .hightlight td {background:#FFFAB5 !important;}
+.gridViewPop .hide {display:none;}
+.gridViewPop .show {display:block;}
+.gridViewPop a.group {color:#A52A2A !important; font-weight:bold;  font-size:14px; display:block; padding:0px 5px; float:left;}
+
+
+
+
+
+
+.quickFilter {display:inline-block; margin-bottom:10px;}
+.quickFilter span {font-weight:bold;}
+.quickFilter input[type=text], .quickFilter select {padding:3px; border:1px solid #ccc;font-family:Verdana; font-size:12px; color:#666; width:120px; }
+.quickFilter select {padding:2px 3px; width:125px;}      
+.bottom-pager {display:inline-block; clear:both; background:#99ccff; font-family:Verdana; width:100%;margin-left:0px; border:1px solid #dedede; border-top:0px; }
+.bottom-pager .left{float:left; padding:2px 3px;}
+.bottom-pager .right {float:right; padding:2px 3px;}
+.bottom-pager span, .bottom-pager a, .bottom-pager input {margin-right:5px; }
+.bottom-pager span {float:left; font-weight:bold; font-size:11px; padding:3px 0px;}
+.bottom-pager input {float:left; width:18px; height:16px; border:1px solid #ccc; font-size:11px; padding:1px;}
+.bottom-pager select {float:left; width:42px; height:22px; border:1px solid #ccc; font-size:11px; padding:2px;}
+.bottom-pager a{float:left; display:block; width:21px; height:21px;}
+.bottom-pager a.first {background:url("/Images/gridview/icon.png") no-repeat scroll left -74px transparent;}
+.bottom-pager a.first:hover {background:url("/Images/gridview/icon.png") no-repeat scroll left -101px transparent;}
+.bottom-pager a.first-disable {background:url("/Images/gridview/icon.png") no-repeat scroll left -128px transparent;}
+.bottom-pager a.pre {background:url("/Images/gridview/icon.png") no-repeat scroll left -392px transparent;}
+.bottom-pager a.pre:hover {background:url("/Images/gridview/icon.png") no-repeat scroll left -419px transparent;}
+.bottom-pager a.pre-disable {background:url("/Images/gridview/icon.png") no-repeat scroll left -446px transparent;}
+.bottom-pager a.next {background:url("/Images/gridview/icon.png") no-repeat scroll left -286px transparent;}
+.bottom-pager a.next:hover {background:url("/Images/gridview/icon.png") no-repeat scroll left -313px transparent;}
+.bottom-pager a.next-disable {background:url("/Images/gridview/icon.png") no-repeat scroll left -340px transparent;}
+.bottom-pager a.last {background:url("/Images/gridview/icon.png") no-repeat scroll left -180px transparent;}
+.bottom-pager a.last:hover {background:url("/Images/gridview/icon.png") no-repeat scroll left -207px transparent;}
+.bottom-pager a.last-disable {background:url("/Images/gridview/icon.png") no-repeat scroll left -234px transparent;}

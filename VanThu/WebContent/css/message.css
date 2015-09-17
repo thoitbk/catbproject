@@ -1,0 +1,46 @@
+.errorblock {
+	color: #ff0000;
+	background-color: #ffEEEE;
+	padding: 8px;
+	margin: 16px;
+}
+
+.errorblock_login {
+	color: #ff0000;
+	background-color: #ffEEEE;
+	padding: 8px;
+	margin: 16px;
+	width: 30%;
+}
+
+
+.notify {
+    border: 1px solid #F0C36D;
+    background-color: #FDFBB8;
+    background-image: url("/images/info.gif") no-repeat scroll 0 0 transparent;
+    padding-left: 1.8em;
+    padding-right: 3px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.error {
+    border: 1px solid #FF0000;
+    background-color: #FF8888;
+    color: red;
+    background-image: url("/images/info.gif") no-repeat scroll 0 0 transparent;
+    padding-left: 1.8em;
+    padding-right: 3px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}

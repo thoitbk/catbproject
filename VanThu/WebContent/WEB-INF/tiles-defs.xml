@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="index" template="/WEB-INF/jsp/index.jsp">
+		<put-attribute name="title" value="Hệ thống văn thư"></put-attribute>
+		<put-attribute name="left" value="/WEB-INF/jsp/login.jsp"></put-attribute>
+		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="login" template="/WEB-INF/jsp/index.jsp">
+		<put-attribute name="title" value="Hệ thống văn thư"></put-attribute>
+		<put-attribute name="left" value="/WEB-INF/jsp/login.jsp"></put-attribute>
+		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="user/changeInfo" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Thay đổi thông tin người dùng"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/user/changeInfo.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="user/changePassword" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Thay đổi mật khẩu"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/user/changePassword.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="user/listUsers" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Quản lý người dùng"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/user/listUsers.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="user/updateUser" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Cập nhật người dùng"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/user/updateUser.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="user/createUser" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Thêm mới người dùng"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/user/createUser.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="department/listDepartments" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Quản lý phòng ban"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/department/listDepartments.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="department/createDepartment" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Thêm mới phòng ban"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/department/createDepartment.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="department/updateDepartment" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Cập nhật phòng ban"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/department/updateDepartment.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="documentType/listDocumentTypes" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Quản lý loại tài liệu"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/documentType/listDocumentTypes.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="document/createDocument" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Thêm mới tài liệu"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/document/createDocument.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="document/simpleSearchDocuments" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Tìm kiếm văn bản đơn giản"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/document/simpleSearchDocuments.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="document/complexSearchDocuments" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Tìm kiếm văn bản phức tạp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/document/complexSearchDocuments.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="document/simpleSearchOutboundDocuments" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Tìm kiếm văn bản đi đơn giản"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/document/simpleSearchOutboundDocuments.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="document/complexSearchOutboundDocuments" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Tìm kiếm văn bản đi phức tạp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/document/complexSearchOutboundDocuments.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="document/simpleSearchInboundDocuments" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Tìm kiếm văn bản đến đơn giản"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/document/simpleSearchInboundDocuments.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="document/complexSearchInboundDocuments" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Tìm kiếm văn bản đến phức tạp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/document/complexSearchInboundDocuments.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="document/unreadDocuments" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Văn bản đến chưa đọc"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/document/unreadDocuments.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="instruction" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Hướng dẫn"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/shared/instruction.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="mail/showInbox" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Hộp thư đến"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/mail/showInbox.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="document/updateDocument" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Cập nhật văn bản"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/document/updateDocument.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="comingDocument/createDocument" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Thêm mới văn bản đến"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/comingDocument/createDocument.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="comingDocument/simpleSearchDocuments" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Tìm kiếm văn bản đến đơn giản"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/comingDocument/simpleSearchDocuments.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="comingDocument/updateDocument" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Cập nhật văn bản đến"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/comingDocument/updateDocument.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="comingDocument/complexSearchDocuments" template="/WEB-INF/tiles/baseLayout.jsp">
+		<put-attribute name="title" value="Tìm kiếm văn bản đến phức tạp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/comingDocument/complexSearchDocuments.jsp"></put-attribute>
+	</definition>
+</tiles-definitions>

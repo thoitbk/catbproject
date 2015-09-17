@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<confidentialLevels>
+	<confidentialLevel>
+		<level>1</level>
+		<name>Thường</name>
+	</confidentialLevel>
+	<confidentialLevel>
+		<level>2</level>
+		<name>Mật</name>
+	</confidentialLevel>
+	<confidentialLevel>
+		<level>3</level>
+		<name>Tối mật</name>
+	</confidentialLevel>
+	<confidentialLevel>
+		<level>4</level>
+		<name>Tuyệt mật</name>
+	</confidentialLevel>
+</confidentialLevels>

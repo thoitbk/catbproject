@@ -1,0 +1,556 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background: #99ccff;
+}
+#thongbaokhan
+{
+    padding:0 auto;
+    margin: 0 auto;
+    border:0px;
+    }
+#Thongbao
+{
+    padding:0 auto;
+    margin: 0 auto;
+    background: #3cffff;
+	text-align:justify;
+	overflow:auto;
+	height:550px;
+}
+#Thongbao span
+{
+    width: 96%;
+    text-align:justify;
+    margin: 5px;
+}
+
+#Thongbao h4
+{
+    
+    text-align:center;
+}
+#Thongbao h3
+{
+    text-align:center;
+}
+#Thongbao p
+{   
+    font-family: Arial Sans-Serif;
+    font-size: 16px;
+    margin: 5px 0 0 7px;
+    text-align: justify;
+    text-indent: 35px;
+    width: 98%;
+   
+}
+#Thongbao .tbRight
+{
+    text-align:right;
+}
+
+ul, li
+{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+a
+{
+    text-decoration: none;
+    color: #000;
+}
+#wapper
+{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    width: 1002px;
+    background: #FFF;
+}
+
+#top
+{
+    width: 992px;
+    height: auto;
+    float: none;
+    display: block;
+    background-color: #FFF;
+    margin: 0 auto;
+}
+.banner-gt
+{
+    display: block;
+    width: 100%;
+    height: 137px;
+    background: url(../images/Banner.png) no-repeat scroll 0 0 transparent;
+    overflow:hidden;
+}
+.menu-text
+{
+    padding-left: 275px;
+    padding-top: 108px;
+    text-shadow: 0.1em 0.1em #FFFFFF;
+    color: #000000;
+    font-family: "Times New Roman" , Times, serif;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.menu-text a
+{
+    padding-right: 25px;
+}
+.menu-text a:hover, .menu-text a:visited, .menu-text a:link, .menu-text a
+{
+    text-decoration: none;
+    color: #000000;
+}
+.txt_top
+{
+    width:100%;
+    display: block;
+    height: 26px;
+    float: left;
+    font-weight: bold;
+    color:red;/* #060*/
+}
+/* Hết phần top */
+
+#Main
+{
+    width: 992px;
+    display: block;
+    background: #FFF;
+    margin: auto;
+    overflow: hidden;
+}
+#left
+{
+    width: 317px;
+    height: auto;
+    display: block;
+    float: left;
+}
+#right
+{
+    width: 667px;
+    display: block;
+    float: right;
+}
+.box_left
+{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 3px;
+}
+.title_left
+{
+    display: block;
+    width: 317px;
+    height: 21px;
+    background: url(../images/img_dn.png) no-repeat scroll 0px 0px transparent;
+    text-align: center;
+    padding-top: 21px;
+}
+.title_leftdk
+{
+    display: block;
+    width: 317px;
+    height: 21px;
+    background: url(../images/img_dn.png) no-repeat scroll 0px 0px transparent;
+    text-align: left;
+    padding-top: 21px;
+}
+.title_left span
+{
+    font-size: 16px;
+    color: #FFF;
+    font-weight: bold;
+}
+.lbl_login
+{
+    overflow: hidden;
+    font: Arial, Helvetica, sans-serif;
+    line-height: 40px;
+    display: block;
+    padding-left: 10px;
+    clear: both;
+    width: 100%;
+    height: 30px;
+    margin: 1px 1px 1px 1px;
+}
+.lbl_login, .txt_login span
+{
+    font-color: #000;
+    font-weight: bold;
+}
+.txt_login
+{
+    font: Arial, Helvetica, sans-serif;
+    display: block;
+    padding-left: 10px;
+    clear: both;
+    width: 100%;
+}
+.out_box_317
+{
+    display: block;
+    width: 315px;
+    height: 122px;
+    background: url(../images/bg_dn.png);
+    border: 1px solid #ffe88c;
+    border-radius: 0px 0px 10px 10px;
+}
+.label
+{
+    float: left;
+    height: 40px;
+    width: 128px;
+    display: inline-block;
+    font-size: 14px;
+}
+.labelUser
+{
+    float: left;
+    height: 40px;
+    width: 150px;
+    display: inline-block;
+}
+.label span
+{
+    margin-top: 20px;
+    text-align: right;
+}
+.checkghinho
+{
+    font-size: 12px;
+    text-align: center;
+    height: 10px;
+    font-style: italic;
+    color: #942F08;
+}
+.textbox
+{
+    float: left;
+    height: 40px;
+    width: 140px;
+    display: inline-block;
+    margin-top: -3px;
+}
+.textbox input
+{
+    height: 22px;
+    margin-top: 12px;
+    width: 160px;
+}
+.btn_dangnhap
+{
+    padding-top: 17px;
+    display: block;
+    padding-left: 115px;
+    clear: both;
+    cursor: pointer;
+    overflow: hidden;
+}
+.btn_dangnhap span
+{
+    background: url("../images/btn_DN.png") no-repeat scroll 0px 0px transparent;
+    cursor: pointer;
+    display: block;
+    height: 32px;
+    width: 103px;
+}
+.btn_dangnhap span:hover
+{
+    background: url("../images/btn_DN copy1.png") no-repeat scroll 0px 0px transparent;
+}
+/*.btn_dangnhap:hover
+{
+    background: url("../../images/../images/btn_DN copy1.png") no-repeat scroll 106px 8px transparent;
+}*/
+
+/*.bottom_dn
+{
+    display: block;
+    background: url(../../images/../images/../images/bottom_dn.png) no-repeat scroll 0px 0px transparent;
+    width: 317px;
+    height: 10px;
+}*/
+.img_left_ds
+{
+    float: left;
+    display: block;
+    width: 43px;
+    height: 50px;
+    background: url(../images/img_left_ds.png);
+}
+.img_rp_ds
+{
+    float: left;
+    display: block;
+    width: 269px;
+    height: 50px;
+    background: url("../images/img_rp_ds.png") repeat-x scroll 0 0 transparent;
+}
+.img_rp_ds span.text-DS
+{
+    margin-top: 25px;
+    padding-top: 25px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 11pt;
+    padding: 0 0 0px 15px;
+    text-transform: uppercase;
+    display: block;
+}
+.img_right_ds
+{
+    float: right;
+    display: block;
+    width: 5px;
+    height: 50px;
+    background: url(../images/img_right_ds.png);
+}
+.img_body_ds
+{
+    display: block;
+    clear: both;
+    height: auto;
+    background-color: #d2e6ff;
+}
+.img_body_ds a, .img_body_ds a:link, .img_body_ds a:hover, .img_body_ds a:visited
+{
+    text-decoration: none;
+    color: #000;
+}
+.img_body_ds ul
+{
+    padding-left: 1px;
+    font-style: normal;
+    color: #000;
+} 
+.img_body_ds .list-lv2 li {
+    background: url("../images/back-level2.gif") no-repeat scroll 18px 15px #FFFFFF;
+    color: #000000;
+    font-family: arial;
+    font-size: 12px;
+    font-style: normal;
+    padding-left: 40px;
+    text-shadow: 0.1em 0.1em #FFFFFF;
+    text-transform: uppercase;
+}
+.img_body_ds li {
+    background: url("../images/note_red.png") no-repeat scroll 9px 15px #DFE1E5;
+    color: #000000;
+    font-family: arial;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 25px;
+    padding-left: 23px;
+    padding-top: 5px;
+    text-shadow: 0.1em 0.1em #FFFFFF;
+    text-transform: uppercase;
+}
+.img_body_ds ul li {padding-left:0px;}
+.img_body_ds ul li span {padding-left:25px;}
+.img_body_ds ul li ul span {padding-left:0px;}
+.img_body_ds .list-lv2 a{ color: #00397a;}
+.img_body_ds .list-lv2 li span.bottom-boder
+{
+     width: 310px;
+     margin-left: -40px;
+     background:url("../images/line_dotted.gif") repeat-x scroll 0 0 transparent; 
+}
+.img_body_ds li span.bottom-boder{
+ display:block;
+ clear:both;
+ height:1px;
+ width: 317px;
+ margin-left: -26px;
+ background:url("../images/line_ds.png") repeat-x scroll 0 0 transparent; 
+}
+#lienket-img{margin-top:1px;}
+/* Hết phần Main-Left */
+.VB_new
+{
+    margin-top: 17px;
+    display: block;
+    height: 30px;
+    background: url(../images/img_vbn.jpg) no-repeat scroll 0 0 transparent;
+}
+#Defaultbdt
+{
+    width: 710px;
+    height:328px;
+    background: url(../images/Logo.jpg) no-repeat scroll 0 0 transparent;
+}
+#Defaultbdt h1 
+{
+    margin: 0 0 -2px 250px;
+    text-align:justify;
+    }
+#Defaultbdt p 
+{   
+    width:90%;    
+    margin: 5px 0 0 7px;
+    text-align:justify;
+    font-family: Arial Sans-Serif;
+    font-size:16px;
+    text-indent:35px;
+    } 
+ #Defaultbdt a 
+ {
+     color:Blue;
+     }       
+.box_right
+{
+    display: block;
+    margin: 0 0 7px 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+#logo img
+{
+    padding-top: 2px;
+    width:99%;
+}
+.VB_boder
+{
+    padding-left: 5px;
+    padding-top: 20px;
+    border-left: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    background-image: url(../images/CongTT.jpg)
+}
+.lbl_VB_new
+{
+    display: inherit;
+    background: url(../images/icon_VB.png) no-repeat scroll 0 0 transparent;
+    text-align: justify;
+    height: 36px;
+    padding: 0px 20px 10px 55px;
+    margin: 1px 1px 1px 1px;
+    font-size: 14px;
+}
+.lbl_VB_new a
+{
+    text-decoration: none;
+    color: black;
+}
+.HDCDDH
+{
+    display: block;
+    height: 30px;
+    width: 667px;
+    background: url(../images/img_lienketweb.png);
+    /*border-bottom: solid #4a5761 1px;*/
+}
+.vb-body
+{
+    float: left;
+    display: block;
+    clear: both;
+    width: 667px;
+    padding: 10px 10px 0px 0px;
+}
+.VB_body_left
+{
+    float: left;
+    width: 336px;
+    height: auto;
+}
+.VB_body_right
+{
+    float: right;
+    width: 328px;
+    height: auto;
+}
+.box_708_white
+{
+    display: block;
+    float: left;
+    width: 667px;
+    padding: 0px 0 10px 4px0;
+    background: #FFFFFF;
+    padding: 1px 0 10px 5px;
+}
+.box_708_color
+{
+    display: block;
+    float: left;
+    width: 667px;
+    padding: 2px 0 10px 5px;
+}
+.VB_body_left a img, .VB_body_right a img
+{
+    background: none repeat scroll 0 0 #F4F4F4;
+    border: 1px solid #004579;
+    float: left;
+    margin-right: 10px;
+}
+p
+{
+    font: 12px Arial,Helvetica,sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    padding-right: 8px;
+}
+
+.box_slide
+{
+    float: left;
+    display: block;
+    width: 667px;
+    margin-bottom: 10px;
+    border: solid 1px #66CCFF;
+    padding: 1px 0;
+}
+.box_slide .back
+{
+    float: left;
+    display: block;
+    width: 16px;
+    height: 50px;
+    padding-top: 36px;
+    background: url(../images/slide_bg.gif) 0 0 repeat-y;
+}
+.box_slide .next
+{
+    float: left;
+    display: block;
+    width: 16px;
+    height: 50px;
+    padding-top: 36px;
+    background: url(../images/slide_bg.gif) 100% 0 repeat-y;
+}
+#show
+{
+    float: left;
+    position: relative;
+    display: block;
+    width: 634px;
+    height: 86px;
+    background: #e7f1ff;
+    overflow: hidden;
+}
+#bottom
+{
+    margin: auto;
+    display: block;
+    width: 1002px;
+    padding: 0;
+    background: #6bcef5;
+    border-bottom: solid 2px #FFFFFF;
+    clear: both;
+    font: normal 12px Arial, Helvetica, sans-serif;
+    color: #8B0202;/*#942F08*/
+    text-align: center;
+    line-height: 200%;
+    padding: 15px 0;
+}
+

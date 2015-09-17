@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.password">root</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/van_thu_db?characterEncoding=utf-8</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<!-- <property name="show_sql">true</property> -->
+
+		<!-- <property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property> -->
+		<!-- <property name="c3p0.acquire_increment">1</property> -->
+		<property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+		<property name="c3p0.idle_test_period">9000</property> <!-- seconds -->
+		<property name="c3p0.max_size">100</property>
+		<property name="c3p0.min_size">5</property>
+		<property name="c3p0.maxConnectionAge">18000</property>
+		<!-- <property name="c3p0.max_statements">0</property> -->
+		<!-- <property name="c3p0.timeout">1800</property> --> <!-- seconds -->
+
+		<mapping class="catb.vanthu.model.DocumentType"></mapping>
+		<mapping class="catb.vanthu.model.Department"></mapping>
+		<mapping class="catb.vanthu.model.Document"></mapping>
+		<mapping class="catb.vanthu.model.DepartmentDocumentId"></mapping>
+		<mapping class="catb.vanthu.model.DepartmentDocument"></mapping>
+		<mapping class="catb.vanthu.model.User"></mapping>
+		<mapping class="catb.vanthu.model.DocumentFile"></mapping>
+		<mapping class="catb.vanthu.model.DocumentNumberTracker"></mapping>
+		<mapping class="catb.vanthu.model.Bureau"></mapping>
+		<mapping class="catb.vanthu.model.ComingDocument"></mapping>
+		<mapping class="catb.vanthu.model.ComingDocumentFile"></mapping>
+	</session-factory>
+</hibernate-configuration>

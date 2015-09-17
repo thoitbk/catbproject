@@ -1,0 +1,109 @@
+﻿#header-splitter
+{
+    background: #c4dcfb;
+    height: 5%;
+}
+#splitterContainer
+{
+    /* Main splitter element */
+    height: 95%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#leftPane
+{
+    float: left;
+    border-top: solid 1px #D89C04;
+    border-right: solid 1px #D89C04;
+    background: #FFF;
+    overflow: hidden;
+}
+#rightPane
+{
+    /*Contains toolbar and horizontal splitter*/
+    float: right;
+    width: 80%;
+    height: 100%;
+    background: #f4f4f4;
+}
+#rightSplitterContainer
+{
+    /*horizontal splitter*/
+    width: 100%;
+    background: #FFFFFF;
+    border-top: solid 1px #9cbdff;
+}
+#rightTopPane
+{
+    /*Top nested in horizontal splitter */
+    width: 100%;
+    height: 50%;
+    overflow: auto;
+    background: #f4f4f4;
+}
+#rightBottomPane
+{
+    /*Bottom nested in horizontal splitter */
+    background: #f4f4f4;
+    width: 100%;
+    overflow: auto;
+}
+/* Splitbar styles; these are the default class names and required styles */
+.splitbarV
+{
+    overflow:hidden;
+    float: left;
+    width: 6px;
+    height: 800px;
+    line-height: 0px;
+    font-size: 0px;
+    border-left: solid 1px #9cbdff;
+    border-right: solid 1px #9cbdff;
+    background:#FED883;/* #cbe1fb url(/images/splitter/panev.gif) 0% 50%;*/
+}
+.splitbarH
+{
+    height: 6px;
+    text-align: left;
+    line-height: 0px;
+    font-size: 0px;
+    border-top: solid 1px #9cbdff;
+    border-bottom: solid 1px #9cbdff;
+    background: #cbe1fb url(/images/splitter/paneh.gif) 50% 0%;
+}
+.splitbuttonV
+{
+    margin-top: -41px;
+    margin-left: -4px;
+    top: 50%;
+    position: relative;
+    height: 83px;
+    width: 10px;
+    background:transparent url(/images/splitter/panevc.png) 10px 50%;
+}
+.splitbuttonV.invert
+{
+    margin-left: 0px;
+    background: transparent url(/images/splitter/panevc.gif) 0px 50%;
+}
+.splitbuttonH
+{
+    margin-left: -41px;
+    left: 50%;
+    position: relative;
+    height: 10px !important;
+    width: 83px;
+    background: transparent url(/images/splitter/panehc.gif) 50% 0px;
+}
+.splitbuttonH.invert
+{
+    margin-top: -4px;
+    background: transparent url(/images/splitter/panehc.gif) 50% -10px;
+}
+.splitbarV.working, .splitbarH.working, .splitbuttonV.working, .splitbuttonH.working
+{
+    -moz-opacity: .50;
+    filter: alpha(opacity=50);
+    opacity: .50;
+}

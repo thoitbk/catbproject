@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//WebContent/WEB-INF/jsp/index.jsp=UTF-8
+encoding//WebContent/WEB-INF/jsp/shared/instruction.jsp=UTF-8
+encoding//WebContent/WEB-INF/tiles/baseLayout.jsp=UTF-8
+encoding//WebContent/css/MVP.css=UTF-8
+encoding//WebContent/demo.jsp=UTF-8
+encoding//WebContent/index.jsp=UTF-8
+encoding//WebContent/js/functions.js=UTF-8
+encoding//WebContent/js/menu.js=UTF-8
+encoding//WebContent/js/myuploadfunction.js=UTF-8
+encoding//src/catb/vanthu/controller/DocumentController.java=UTF-8
+encoding//src/catb/vanthu/controller/MailController.java=UTF-8
+encoding//src/catb/vanthu/controller/UserController.java=UTF-8
+encoding//src/catb/vanthu/mail/MailSender.java=UTF-8

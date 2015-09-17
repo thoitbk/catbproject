@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urgentLevels>
+	<urgentLevel>
+		<level>1</level>
+		<name>Thường</name>
+	</urgentLevel>
+	<urgentLevel>
+		<level>2</level>
+		<name>Khẩn</name>
+	</urgentLevel>
+	<urgentLevel>
+		<level>3</level>
+		<name>Thượng khẩn</name>
+	</urgentLevel>
+	<urgentLevel>
+		<level>4</level>
+		<name>Hỏa tốc</name>
+	</urgentLevel>
+</urgentLevels>

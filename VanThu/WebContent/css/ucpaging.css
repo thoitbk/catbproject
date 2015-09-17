@@ -1,0 +1,280 @@
+﻿.table-master-detail
+{
+    width: 100%;
+    font: 12px arial;
+    padding: 5px;
+}
+.table-master-detail
+{
+    border: 1px solid #cecece;
+    background-color: #FFF;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-top: 3px;
+}
+.table-master-detail :hover td
+{
+    background-color: #F1F9FD;
+}
+.table-master-detail .selected-row td
+{
+    background-color: #FFFAB5;
+}
+.table-master-detail img
+{
+    border: 0px;
+}
+.table-master-detail .md-header td
+{
+    font-weight: bold;
+    text-align: center;
+    height: 26px;
+    color: #3B7EB1;
+}
+.table-master-detail a
+{
+    color: #1E48D2;
+    padding-left: 3px;
+}
+.table-master-detail .mdaction
+{
+    text-align: right;
+    padding-right: 3px;
+}
+.table-master-detail a.item-showhide
+{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #A52A2A;
+    padding-left: 5px;
+}
+.table-master-detail .td-pager
+{
+    padding-top: 3px;
+    background: url("/images/pagingBackground.gif") repeat-x scroll 0 0 transparent;
+    height: 25px;
+    border-bottom: 1px solid #CECECE;
+}
+.DDPager
+{
+    font: 12px arial;
+}
+.table-info
+{
+    background: #eee;
+    font-size: 11px;
+}
+.table-info .header td
+{
+    font-weight: bold;
+    text-align: center;
+    font-size: 12px;
+}
+.table-info td
+{
+    padding: 2px 3px;
+    background-color: #fff;
+    border: 1px solid #DDDDDD;
+}
+.table-info td.label
+{
+    background-color: #fafafa;
+}
+.table-info :hover td
+{
+    background-color: #F1F9FD;
+}
+.table-info tr.active td
+{
+    background-color: #FFFAB5;
+}
+.table-info .header td
+{
+    background-color: #FFF !important;
+}
+/*.table-info .row td.value {font-weight:bold;}*/
+
+/* Begin music-function-box*/
+.music-function-box, .music-function-box .list-playlist
+{
+    position: absolute;
+    top: 28px;
+    left: 10px;
+    z-index: 40;
+}
+.music-function-box ul, .drop-box, .etooltip
+{
+    padding: 5px 0;
+}
+.music-function-box .add-playlist
+{
+    position: relative;
+    background-position: 172px -632px;
+}
+.music-function-box .add-favorite a
+{
+    background-position: left -885px;
+}
+.music-function-box .add-favorite a:hover
+{
+    background-position: left -910px;
+}
+.music-function-box .add-zme-music a
+{
+    background-position: left -937px;
+}
+.music-function-box .add-zme-music a:hover
+{
+    background-position: left -962px;
+}
+.music-function-box .gv-zme-music a
+{
+    background-position: left -989px;
+}
+.music-function-box .gv-zme-music a:hover
+{
+    background-position: left -1011px;
+}
+.music-function-box li a, .drop-box a
+{
+    padding: 5px 10px 5px 35px;
+    display: block;
+    background-position: left -837px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    width: auto;
+}
+.music-function-box li.share-zme a, .music-function-box li.share-zme a:hover
+{
+    background-position: left -2036px;
+}
+.music-function-box li.share-fb a, .music-function-box li.share-fb a:hover
+{
+    background-position: left -2061px;
+}
+.music-function-box li.share-gp a, .music-function-box li.share-gp a:hover
+{
+    background-position: left -2087px;
+}
+.drop-box a
+{
+    background-position: left -937px;
+    text-align: left;
+}
+.music-function-box li a:hover, .drop-box a:hover
+{
+    background-position: left -862px;
+    background-color: #f2f2f2;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+}
+.drop-box a:hover
+{
+    background-position: left -962px;
+}
+.drop-box .gift a
+{
+    background-position: left -989px;
+}
+.drop-box .gift a:hover
+{
+    background-position: left -1011px;
+}
+.music-function-box p
+{
+    padding: 5px 5px;
+    overflow: hidden;
+    border-top: 1px solid #dfdfdf;
+    background-color: #f2f2f2;
+}
+.music-function-box p .text-box
+{
+    width: 95px;
+    float: left;
+}
+.music-function-box p .button
+{
+    float: right;
+    margin: 0 0 0 5px;
+    height: 16px;
+}
+.music-function-box .list-playlist
+{
+    left: 15px;
+    width: 185px;
+    max-height: 144px;
+    overflow: auto;
+    display: none;
+}
+.add-playlist.active ul
+{
+    display: block !important;
+}
+.categories, .sidebar-block, .music-function-box, .music-function-box .list-playlist, .lyric-content, .drop-box, .etooltip, .z-chart-box
+{
+    border: 1px solid #dfdfdf;
+    -moz-box-shadow: 0 0px 5px #dfdfdf;
+    -webkit-box-shadow: 0 0px 5px #dfdfdf;
+    -ms-box-shadow: 0 0px 5px #dfdfdf;
+    -o-box-shadow: 0 0px 5px #dfdfdf;
+    box-shadow: 0 0px 5px #dfdfdf;
+}
+.music-function-box, .music-function-box .list-playlist, .search-autocomplete, .footer, .avatar, .drop-box, .z-chart-box
+{
+    background-color: white;
+}
+.music-function-box li a, .music-function-box .add-playlist, .main-notification p, span.dialog, .notification .close, .comment-item .close, .iLyric span, .tab-search li, .drop-box a, .filter p, .fb, .user-vip, .singer-img .top-rank, .rank-up, .rank-down, .rank-peak, .rank-new, .rank-bar, .bxh-title .read-more, .bxh-detail .read-more, .option-select, .next-button, .prev-button, .hlyric, .hq, .hit, .hot, .number, .music-list li, .zingarrowuser, .lt-icon, .nu-icon, .ln-icon, .chart-date-nav .next, .chart-date-nav .prev, .chart-date-nav .open-cart, .genre-album-home .content-block-title .album-title-icon, .eh, .radio-function .like, .radio-function .like-num .dialog, .radio-sub-category li a, .detail-function .like, .radio-function .radio-share, .zing-album-img .top-rank, .z-chart-box .dialog, .sidebar-singer-info .fan-btn span, .activity-block .feed-type, .share
+{
+    background: url(../images/icon-8.png) no-repeat;
+}
+.tab-nav a, .tooltip p, .special-song .content-item p, .sidebar-block-title a.read-more, .search-item h3, .search-item span, .music-function-box p .text-box, .music-function-box li a, .sidebar-block-content p, #tab-tooltip a, .paging a, .button, .tab-nav li, .main-notification, .gray-button, .content-block .video-item p, .first-search-song p, .z-chart-point, .feed-time
+{
+    color: #808080;
+}
+.sidebar-block-title a.read-more:hover, .video .content-item span a, .singer-video span a, .singer-album span a, .user-function a, .tab-nav .tab-selected a, .zing-top-video-item span a, .zing-top-album-item span a, .zing-top-song-item span a, .video-item span a, .album-item span a, .song-item span a, .detail-title, .song-info, .lyric-block h3, .lyric-block p, .singer-info-block p, .comment-form .comment-textarea, .comment-item p, .search-item a, .music-function-box li a:hover, .main-notification p, .song-slider-nav a, .tooltip p, .detail-content h3, .album-info p, #tab-tooltip a:hover, #tab-tooltip .active, .paging a:hover, .paging .active, .tab-nav .tab-selected, .channel-info p, .gray-button:hover, .search-for, .drop-box a, .etooltip p, .biz-info p, .cate-active, .cate-active a, .donor p, .bxh-col .content-item .top-rank, .bxh-col .content-item a, .rank-peak, .bxh-title, .singer-item .read-more, .playlist a, .video-playlist a, .emb-tooltip label, #tab-tooltip .unlike:hover, .featured-singer .content-item span a, .genre-categories .genre-tab li a, .header .selected h3 a, .genre-album .album-item .album-info ul li, .genre-tab-item p, .zing-vip, .zing-vip .read-more, .singer .singer-cover .singer-nav a, .song-block li p .ln-bar:hover span, .z-chart-box p span, .z-chart-tip p span
+{
+    color: #555;
+}
+.search-content
+{
+    float: left;
+    position: relative;
+}
+#div-label
+{
+    border: 1px solid #D1E3F1;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    border-radius: 4px 4px 4px 4px;
+}
+#div-label .div-select-label
+{
+    margin-right: -8px;
+    margin-bottom: -8px;
+}
+.div-select-label
+{
+    height: 30px;
+    display: block;
+    border-top: 1px solid #D1E3F1;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.list-item
+{
+    cursor: pointer;
+}
+.div-item
+{
+    display: block;
+    clear: both;
+}
+.list-item:hover
+{
+    background-color: #FFFFEF;
+}
+.music-function-box
+{
+}
