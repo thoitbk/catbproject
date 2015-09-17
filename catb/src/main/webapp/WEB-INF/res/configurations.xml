@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurations>
+	<webTitle>Công an tỉnh Thái Bình</webTitle>
+	<marqueeTitle>Công an Thái Bình quyết tâm thực hiện tốt 6 điều Bác Hồ dạy</marqueeTitle>
+	<recentNews>5</recentNews>
+	<questionAnswer>5</questionAnswer>
+	<tcCatalogs>3</tcCatalogs>
+	<sameSubjects>10</sameSubjects>
+	<headlines>6</headlines>
+	<headlineCaption>Sự kiện nổi bật</headlineCaption>
+	<imageCaption>Ảnh</imageCaption>
+	<videoCaption>Videos</videoCaption>
+	<audioCaption>Audios</audioCaption>
+	<detailsCaption>Xem chi tiết</detailsCaption>
+	<administrativeProcedures>Thủ tục hành chính</administrativeProcedures>
+	<administrativeProceduresInstruction>Hướng dẫn thủ tục hành chính</administrativeProceduresInstruction>
+	<views>Số lượt truy cập:</views>
+	<introduction>Giới thiệu chung</introduction>
+	<organizationalStructure>Lãnh đạo công an Thái Bình</organizationalStructure>
+	<mostViewed>5</mostViewed>
+	<adAmount>5</adAmount>
+	<newsInSameCatalog>10</newsInSameCatalog>
+	<newsInSearchResult>50</newsInSearchResult>
+	<sameSubjectTitle>Các tin khác cùng chủ đề</sameSubjectTitle>
+	<today>Hôm nay</today>
+	<postedDate>Ngày đăng:</postedDate>
+	<author></author>
+	<print>In bài này</print>
+	<homePage>Trang chủ</homePage>
+	<document>Văn bản</document>
+	<legalDocument>Văn bản pháp quy pháp luật</legalDocument>
+	<goTop>Về đầu trang</goTop>
+	<duty>Chức năng nhiệm vụ</duty>
+	<achievement>Thành tích đã đạt được</achievement>
+	<pageSize>10</pageSize>
+	<rightTopSize>10</rightTopSize>
+	<rightCenterSize>5</rightCenterSize>
+</configurations>

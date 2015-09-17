@@ -1,0 +1,114 @@
+ul#loadbar {
+list-style: none;
+width: 140px;
+margin: 0 auto;
+padding-top: 50px;
+padding-bottom: 75px;
+}
+ul#loadbar li {
+float: left;
+position: relative;
+width: 11px;
+height: 26px;
+margin-left: 1px;
+border-left: 1px solid #111;
+border-top: 1px solid #111;
+border-right: 1px solid #333;
+border-bottom: 1px solid #333;
+background: #000;
+}
+ul#loadbar li:first-child { margin-left: 0 }
+.bar {
+background-color: #2187e7;
+background-image: -moz-linear-gradient(45deg, #2187e7 25%, #a0eaff);
+background-image: -webkit-linear-gradient(45deg, #2187e7 25%, #a0eaff);
+background-image: -ms-linear-gradient(45deg, #2187e7 25%, #a0eaff);
+background-image: -o-linear-gradient(45deg, #2187e7 25%, #a0eaff);
+background-image: linear-gradient(45deg, #2187e7 25%, #a0eaff);
+width: 11px;
+height: 26px;
+opacity: 0;
+-webkit-animation: fill .5s linear forwards;
+-moz-animation: fill .5s linear forwards;
+-ms-animation: fill .5s linear forwards;
+animation: fill .5s linear forwards;
+}
+#layerFill1 {
+-moz-animation-delay: 0.5s;
+-webkit-animation-delay: 0.5s;
+-ms-animation-delay: 0.5s;
+animation-delay: 0.5s;
+}
+#layerFill2 {
+-moz-animation-delay: 1s;
+-webkit-animation-delay: 1s;
+-ms-animation-delay: 1s;
+animation-delay: 1s;
+}
+#layerFill3 {
+-moz-animation-delay: 1.5s;
+-webkit-animation-delay: 1.5s;
+-ms-animation-delay: 1.5s;
+animation-delay: 1.5s;
+}
+#layerFill4 {
+-moz-animation-delay: 2s;
+-webkit-animation-delay: 2s;
+-ms-animation-delay: 2s;
+animation-delay: 2s;
+}
+#layerFill5 {
+-moz-animation-delay: 2.5s;
+-webkit-animation-delay: 2.5s;
+-ms-animation-delay: 2.5s;
+animation-delay: 2.5s;
+}
+#layerFill6 {
+-moz-animation-delay: 3s;
+-webkit-animation-delay: 3s;
+-ms-animation-delay: 3s;
+animation-delay: 3s;
+}
+#layerFill7 {
+-moz-animation-delay: 3.5s;
+-webkit-animation-delay: 3.5s;
+-ms-animation-delay: 3.5s;
+animation-delay: 3.5s;
+}
+#layerFill8 {
+-moz-animation-delay: 4s;
+-webkit-animation-delay: 4s;
+-ms-animation-delay: 4s;
+animation-delay: 4s;
+}
+#layerFill9 {
+-moz-animation-delay: 4.5s;
+-webkit-animation-delay: 4.5s;
+-ms-animation-delay: 4.5s;
+animation-delay: 4.5s;
+}
+#layerFill10 {
+-moz-animation-delay: 5s;
+-webkit-animation-delay: 5s;
+-ms-animation-delay: 5s;
+animation-delay: 5s;
+}
+@-moz-keyframes fill {
+0% { opacity: 0 }
+100% { opacity: 1 }
+}
+@-webkit-keyframes fill {
+0% { opacity: 0 }
+100% { opacity: 1 }
+}
+@-ms-keyframes fill {
+0% { opacity: 0 }
+100% { opacity: 1 }
+}
+@keyframes fill {
+0% { opacity: 0 }
+100% { opacity: 1 }
+}
+.vcard, #HTML2, #AdSense1, #BlogArchive1, #Label1, #AdSense2 {display:none;}.post {font-size:14px;}
+.footer, .post-footer, .feed-links, .sidebar,.fauxcolumn-right-outer,.column-right-outer, #HTML6 , .home-link, .banners {display:none !important;}
+.main-inner .columns{padding-right:0 !important;}.column-center-outer{width:95% !important;}

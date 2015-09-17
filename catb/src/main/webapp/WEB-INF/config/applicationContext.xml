@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+        
+    <!-- Auto scan DAO and Service components -->
+	<context:component-scan base-package="com.catb">
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+	<mvc:annotation-driven />
+	
+	<!-- Configure sessionFactory -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="com.mysql.jdbc.Driver" />
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/catb_db" />
+		<property name="user" value="root" />
+		<property name="password" value="root" />
+		<property name="idleConnectionTestPeriod" value="9000"></property>
+		<property name="maxPoolSize" value="200"></property>
+		<property name="minPoolSize" value="10"></property>
+		<property name="maxConnectionAge" value="18000"></property>
+	</bean>
+	<bean id="hibernate4AnnotatedSessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="annotatedClasses">
+			<list>
+				<value>com.catb.model.User</value>
+				<value>com.catb.model.AdCatalog</value>
+				<value>com.catb.model.AdministrativeProcedure</value>
+				<value>com.catb.model.AdministrativeProcedureFile</value>
+				<value>com.catb.model.Comment</value>
+				<value>com.catb.model.CriminalDenouncement</value>
+				<value>com.catb.model.Department</value>
+				<value>com.catb.model.Document</value>
+				<value>com.catb.model.DocumentFile</value>
+				<value>com.catb.model.DocumentTypeCatalog</value>
+				<value>com.catb.model.Field</value>
+				<value>com.catb.model.Image</value>
+				<value>com.catb.model.ImageCatalog</value>
+				<value>com.catb.model.Introduction</value>
+				<value>com.catb.model.LinkCatalog</value>
+				<value>com.catb.model.News</value>
+				<value>com.catb.model.NewsCatalog</value>
+				<value>com.catb.model.NewsContent</value>
+				<value>com.catb.model.Position</value>
+				<value>com.catb.model.Permission</value>
+				<value>com.catb.model.QACatalog</value>
+				<value>com.catb.model.Role</value>
+				<value>com.catb.model.Video</value>
+				<value>com.catb.model.VideoCatalog</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</prop>
+				<prop key="hibernate.cache.use_second_level_cache">true</prop>
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+				<prop key="hibernate.generate_statistics">true</prop>
+				<prop key="net.sf.ehcache.configurationResourceName">/ehcache-hibernate.xml</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!-- Configure transaction manager -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	
+	<!-- Inject sessionFactory into DAO -->
+	<bean id="userDAO" class="com.catb.dao.impl.UserDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="positionDAO" class="com.catb.dao.impl.PositionDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="departmentDAO" class="com.catb.dao.impl.DepartmentDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="roleDAO" class="com.catb.dao.impl.RoleDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="permissionDAO" class="com.catb.dao.impl.PermissionDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="newsCatalogDAO" class="com.catb.dao.impl.NewsCatalogDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="newsDAO" class="com.catb.dao.impl.NewsDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="linkCatalogDAO" class="com.catb.dao.impl.LinkCatalogDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="documentTypeCatalogDAO" class="com.catb.dao.impl.DocumentTypeCatalogDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="fieldDAO" class="com.catb.dao.impl.FieldDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="administrativeProcedureDAO" class="com.catb.dao.impl.AdministrativeProcedureDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="documentDAO" class="com.catb.dao.impl.DocumentDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="imageCatalogDAO" class="com.catb.dao.impl.ImageCatalogDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="videoCatalogDAO" class="com.catb.dao.impl.VideoCatalogDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="imageDAO" class="com.catb.dao.impl.ImageDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="videoDAO" class="com.catb.dao.impl.VideoDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="qaCatalogDAO" class="com.catb.dao.impl.QACatalogDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="commentDAO" class="com.catb.dao.impl.CommentDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="criminalDenouncementDAO" class="com.catb.dao.impl.CriminalDenouncementDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="adCatalogDAO" class="com.catb.dao.impl.AdCatalogDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	
+	<!-- Configuration of shiro filter for authentication and authorization -->
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+		<property name="securityManager" ref="securityManager" />
+		<property name="loginUrl" value="/cm/login"/>
+		<property name="successUrl" value="/cm/home"/> 
+		<property name="unauthorizedUrl" value="/cm/unauthorized"/><!-- this url is applied only for web filter, not for annotation -->
+		<property name="filterChainDefinitions">
+			<value>
+				# secure content management
+				/cm/login = anon
+				/cm/** = authc
+				# secure static resources
+				/resources/js/cm/** = authc
+				# /ckfinder/** = authc
+				# /ckeditor/** = authc
+				
+				/** = anon
+			</value>
+		</property>
+	</bean>
+	
+	<!-- Configure security manager -->
+	<bean id="hashService" class="org.apache.shiro.crypto.hash.DefaultHashService">
+		<property name="hashIterations" value="500000"></property>
+		<property name="hashAlgorithmName" value="SHA-256"></property>
+		<property name="generatePublicSalt" value="true"></property>
+		<!-- <property name="privateSalt" value="this is a private salt"></property> -->
+	</bean>
+	<bean id="passwordService" class="org.apache.shiro.authc.credential.DefaultPasswordService">
+		<property name="hashService" ref="hashService"></property>
+	</bean>
+	<bean id="passwordMatcher" class="org.apache.shiro.authc.credential.PasswordMatcher">
+		<property name="passwordService" ref="passwordService"></property>
+	</bean>
+	<bean id="userBO" class="com.catb.bo.impl.UserBOImpl" />
+	<bean id="authRealm" class="com.catb.auth.AuthRealm">
+		<property name="userBO" ref="userBO" />
+		<property name="credentialsMatcher" ref="passwordMatcher"></property>
+		<property name="name" value="authRealmCache" />
+	</bean>
+	<bean id="cacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+        <property name="cacheManagerConfigFile" value="classpath:ehcache.xml"/>
+    </bean>
+    
+    <bean id="equalMatcher" class="org.apache.shiro.authc.credential.SimpleCredentialsMatcher">
+    </bean>
+    <bean id="superRealm" class="com.catb.auth.SuperRealm">
+    	<property name="credentialsMatcher" ref="equalMatcher"></property>
+    	<property name="name" value="authRealmCache" />
+    </bean>
+    
+    
+	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+		<property name="cacheManager" ref="cacheManager"/>
+    	<property name="realms">
+    		<list>
+    			<ref bean="superRealm" />
+    			<ref bean="authRealm" />
+    		</list>
+    	</property>
+	</bean>
+	
+	<!-- captcha generator -->
+	<bean id="captchaProducer" class="com.google.code.kaptcha.impl.DefaultKaptcha">
+	    <property name="config">
+            <bean class="com.google.code.kaptcha.util.Config">
+	            <constructor-arg type="java.util.Properties">
+	                <props>
+	                    <prop key="kaptcha.image.width">200</prop> 
+	                    <prop key="kaptcha.image.height">60</prop>
+	                    <prop key="kaptcha.textproducer.char.string">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</prop>
+	                    <prop key="kaptcha.textproducer.char.length">6</prop>
+	                </props>
+	            </constructor-arg>
+            </bean>
+	    </property>
+	</bean>
+</beans>

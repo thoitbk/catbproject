@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<!-- ==============================================================================
+	  										FRONT
+         ============================================================================== -->
+	<definition name="home" template="/WEB-INF/views/tiles/front/frontBaseLayout.jsp">
+		<put-attribute name="left_high" value="/WEB-INF/views/front/home/hightlights.jsp"></put-attribute>
+		<put-attribute name="left_low" value="/WEB-INF/views/front/home/newsList.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="showNewsesByNewsCatalog" template="/WEB-INF/views/tiles/front/frontBaseLayout.jsp">
+		<put-attribute name="left_high" value="/WEB-INF/views/front/details/listNewses.jsp"></put-attribute>
+		<put-attribute name="left_low" value="/WEB-INF/views/tiles/front/left_low.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="showNewsDetails" template="/WEB-INF/views/tiles/front/frontBaseLayout.jsp">
+		<put-attribute name="left_high" value="/WEB-INF/views/front/details/details.jsp"></put-attribute>
+		<put-attribute name="left_low" value="/WEB-INF/views/tiles/front/left_low.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="administrativeProcedure/list" template="/WEB-INF/views/tiles/front/frontBaseLayout.jsp">
+		<put-attribute name="left_high" value="/WEB-INF/views/front/details/listAdministrativeProcedures.jsp"></put-attribute>
+		<put-attribute name="left_low" value="/WEB-INF/views/tiles/front/left_low.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="administrativeProcedure/view" template="/WEB-INF/views/tiles/front/frontBaseLayout.jsp">
+		<put-attribute name="left_high" value="/WEB-INF/views/front/details/viewAdministrativeProcedure.jsp"></put-attribute>
+		<put-attribute name="left_low" value="/WEB-INF/views/tiles/front/left_low.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="document/list" template="/WEB-INF/views/tiles/front/frontBaseLayout.jsp">
+		<put-attribute name="left_high" value="/WEB-INF/views/front/details/listDocuments.jsp"></put-attribute>
+		<put-attribute name="left_low" value="/WEB-INF/views/tiles/front/left_low.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="document/view" template="/WEB-INF/views/tiles/front/frontBaseLayout.jsp">
+		<put-attribute name="left_high" value="/WEB-INF/views/front/details/viewDocument.jsp"></put-attribute>
+		<put-attribute name="left_low" value="/WEB-INF/views/tiles/front/left_low.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="imageGalleries" template="/WEB-INF/views/tiles/front/frontBaseLayout.jsp">
+		<put-attribute name="left_high" value="/WEB-INF/views/front/media/imageGalleries.jsp"></put-attribute>
+		<put-attribute name="left_low" value="/WEB-INF/views/tiles/front/left_low.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="videoGalleries" template="/WEB-INF/views/tiles/front/frontBaseLayout.jsp">
+		<put-attribute name="left_high" value="/WEB-INF/views/front/media/videoGalleries.jsp"></put-attribute>
+		<put-attribute name="left_low" value="/WEB-INF/views/tiles/front/left_low.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="askQuestion" template="/WEB-INF/views/tiles/front/frontBaseLayout.jsp">
+		<put-attribute name="left_high" value="/WEB-INF/views/front/qa/askQuestion.jsp"></put-attribute>
+		<put-attribute name="left_low" value="/WEB-INF/views/tiles/front/left_low.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="listComments" template="/WEB-INF/views/tiles/front/frontBaseLayout.jsp">
+		<put-attribute name="left_high" value="/WEB-INF/views/front/qa/listComments.jsp"></put-attribute>
+		<put-attribute name="left_low" value="/WEB-INF/views/tiles/front/left_low.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="commentDetail" template="/WEB-INF/views/tiles/front/frontBaseLayout.jsp">
+		<put-attribute name="left_high" value="/WEB-INF/views/front/qa/commentDetail.jsp"></put-attribute>
+		<put-attribute name="left_low" value="/WEB-INF/views/tiles/front/left_low.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="denounceCriminal" template="/WEB-INF/views/tiles/front/frontBaseLayout.jsp">
+		<put-attribute name="left_high" value="/WEB-INF/views/front/qa/denounceCriminal.jsp"></put-attribute>
+		<put-attribute name="left_low" value="/WEB-INF/views/tiles/front/left_low.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="search" template="/WEB-INF/views/tiles/front/frontBaseLayout.jsp">
+		<put-attribute name="left_high" value="/WEB-INF/views/front/home/search.jsp"></put-attribute>
+		<put-attribute name="left_low" value="/WEB-INF/views/tiles/front/left_low.jsp"></put-attribute>
+	</definition>
+	
+	<!-- ==============================================================================
+	  									CONTENT MANAGEMENT
+         ============================================================================== -->
+	<definition name="cm/home" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/tiles/cm/content.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/position/add" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/cat/addPosition.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/position/update" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/cat/updatePosition.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/department/add" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/cat/addDepartment.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/department/update" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/cat/updateDepartment.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/documentType/add" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/cat/addDocumentType.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/documentType/update" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/cat/updateDocumentType.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/field/add" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/cat/addField.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/field/update" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/cat/updateField.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/user/add" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/sys/addUser.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/user/update" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/sys/updateUser.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/role/add" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/sys/addRole.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/role/update" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/sys/updateRole.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/permission/add" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/sys/addPermission.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/permission/update" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/sys/updatePermission.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/showPermission" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/sys/grantPermission.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/manageUserRole" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/sys/manageUserRole.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/unauthorized" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/share/unauthorized.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/internalError" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/share/internalError.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/configurations" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/sys/configurations.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/newsCatalog/add" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/news/addNewsCatalog.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/newsCatalog/update" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/news/updateNewsCatalog.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/news/create" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/news/createNews.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/news/manage" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/news/manageNews.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/news/update" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/news/updateNews.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/news/approve" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/news/approveNews.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/linkCatalog/add" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/other/addLinkCatalog.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/linkCatalog/update" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/other/updateLinkCatalog.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/notExistedResource" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/share/notExistedResource.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/administrativeProcedure/add" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/doc/addAdministrativeProcedure.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/administrativeProcedure/update" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/doc/updateAdministrativeProcedure.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/document/add" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/doc/addDocument.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/document/update" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/doc/updateDocument.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/imageCatalog/add" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/media/addImageCatalog.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/imageCatalog/update" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/media/updateImageCatalog.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/videoCatalog/add" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/media/addVideoCatalog.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/videoCatalog/update" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/media/updateVideoCatalog.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/image/add" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/media/addImage.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/image/update" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/media/updateImage.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/video/add" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/media/addVideo.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/video/update" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/media/updateVideo.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/qaCatalog/add" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/qa/addQACatalog.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/qaCatalog/update" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/qa/updateQACatalog.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/comment/show" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/qa/showQuestions.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/comment/answer" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/qa/answerQuestion.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/criminalDenouncement/show" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/qa/showCriminalDenouncements.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/criminalDenouncement/reply" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/qa/replyDenouncement.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/adv/add" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/other/addAdvCatalog.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/adv/update" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/other/updateAdvCatalog.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/user/edit" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/sys/editUser.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cm/user/changePassword" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/sys/changePassword.jsp"></put-attribute>
+	</definition>
+</tiles-definitions>

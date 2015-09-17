@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache name="hibernateCache">
+	<diskStore path="D://hibernateCache"/> 
+	<defaultCache 
+	   	maxEntriesLocalHeap="10000" 
+	   	eternal="false" 
+	   	timeToIdleSeconds="1800" 
+	   	timeToLiveSeconds="3600" 
+	   	maxEntriesLocalDisk="1000000" 
+	   	diskExpiryThreadIntervalSeconds="120" 
+	   	memoryStoreEvictionPolicy="LRU"> 
+	   	<persistence strategy="localTempSwap"/>
+	</defaultCache>
+	
+	<!-- Second-level cache for entities -->
+	<cache
+	   	name="com.catb.model.News"
+	   	maxEntriesLocalHeap="10000"
+	   	eternal="false"
+	   	timeToIdleSeconds="1800"
+	   	timeToLiveSeconds="3600"
+	   	memoryStoreEvictionPolicy="LRU">
+	   	<persistence strategy="localTempSwap"/>
+   	</cache>
+   	
+   	<cache
+	   	name="com.catb.model.NewsCatalog"
+	   	maxEntriesLocalHeap="1000"
+	   	eternal="false"
+	   	timeToIdleSeconds="1800"
+	   	timeToLiveSeconds="3600"
+	   	memoryStoreEvictionPolicy="LRU">
+	   	<persistence strategy="localTempSwap"/>
+   	</cache>
+   	
+   	<cache
+	   	name="com.catb.model.Image"
+	   	maxEntriesLocalHeap="100"
+	   	eternal="false"
+	   	timeToIdleSeconds="18000"
+	   	timeToLiveSeconds="36000"
+	   	memoryStoreEvictionPolicy="LRU">
+	   	<persistence strategy="localTempSwap"/>
+   	</cache>
+   	
+   	<!-- Query cache -->
+   	<!-- Used for query cache not named -->
+	<cache 
+		name="org.hibernate.cache.internal.StandardQueryCache"
+		maxEntriesLocalHeap="5"
+		eternal="false"
+		timeToLiveSeconds="120">
+		<persistence strategy="localTempSwap"/>
+	</cache>
+	
+	<!-- Cache keeping track timestamps of tables and query -->
+	<cache
+		name="org.hibernate.cache.spi.UpdateTimestampsCache"
+		maxEntriesLocalHeap="5000"
+		eternal="true">
+		<persistence strategy="localTempSwap"/>
+	</cache>
+	
+	<!-- region: query.specialSites -->
+	<cache 
+		name="query.specialSites"
+		maxEntriesLocalHeap="20"
+		eternal="false"
+		timeToLiveSeconds="86400">
+		<persistence strategy="localTempSwap"/>
+	</cache>
+	
+	<!-- region: query.newsesByNewsCatalogId -->
+	<cache 
+		name="query.newsesByNewsCatalogId"
+		maxEntriesLocalHeap="5"
+		eternal="false"
+		timeToLiveSeconds="86400">
+		<persistence strategy="localTempSwap"/>
+	</cache>
+	
+	<!-- region: query.hotNewses -->
+	<cache 
+		name="query.hotNewses"
+		maxEntriesLocalHeap="20"
+		eternal="false"
+		timeToLiveSeconds="86400">
+		<persistence strategy="localTempSwap"/>
+	</cache>
+	
+	<!-- region: query.newsCatalogByLocation -->
+	<cache 
+		name="query.newsCatalogByLocation"
+		maxEntriesLocalHeap="50"
+		eternal="false"
+		timeToLiveSeconds="86400">
+		<persistence strategy="localTempSwap"/>
+	</cache>
+	
+	<!-- region: query.images -->
+	<cache 
+		name="query.images"
+		maxEntriesLocalHeap="50"
+		eternal="false"
+		timeToLiveSeconds="86400">
+		<persistence strategy="localTempSwap"/>
+	</cache>
+</ehcache>

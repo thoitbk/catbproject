@@ -1,0 +1,83 @@
+.SummaryInfoBox {
+    margin-bottom: 4px;
+}
+.SummaryInfoBox .TableKhung {
+    border: 0 none;
+    color: #000000;
+    font-family: Arial;
+    font-size: 9pt;
+    table-layout: fixed;
+    width: 100%;
+}
+.SummaryInfoBox .TRight_khung {
+    width: 0;
+}
+.SummaryInfoBox .TLeft_khung {
+    width: 0;
+}
+.SummaryInfoBox .TCenter_khung:before {
+    content: url("images/logo_title1.png");
+    left: 10px;
+    padding-right: 12px;
+    position: relative;
+    top: 6px;
+}
+.SummaryInfoBox .TCenter_khung {
+    background: none repeat scroll 0 0 #B10101;
+}
+.SummaryInfoBox .Center_khung {
+    background-color: #FFFFFF;
+    padding: 0 6px;
+}
+.SummaryInfoBox .menu_name {
+    color: #FFFFFF !important;
+    font: bold 10pt/30px Arial;
+}
+.SummaryInfoBox .Center_khung .content_title {
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+.SummaryInfoBox .Center_khung DIV TD {
+    padding: 3px;
+    vertical-align: top;
+}
+.title_link:hover {
+    color: #000000 !important;
+}
+.SummaryInfoBox .Center_khung .content_title * {
+    color: #333333;
+    font: bold 10pt Arial;
+}
+.SummaryInfoBox .Center_khung * IMG {
+    height: 111px !important;
+    width: 156px !important;
+}
+.SummaryInfoBox .Center_khung .summary {
+    font: 9pt Arial !important;
+    padding-bottom: 8px;
+}
+.SummaryInfoBox .sublink A {
+    color: #333333;
+    font: bold 9pt Arial;
+}
+.SummaryInfoBox .sublink A:hover {
+    color: #000000;
+}
+.SummaryInfoBox .sublink {
+    background: url("images/iconsublink.gif") no-repeat scroll 6px center rgba(0, 0, 0, 0);
+    padding-bottom: 3px;
+    padding-left: 18px;
+    padding-top: 3px;
+}
+.SummaryInfoBox .BLeft_khung {
+}
+.SummaryInfoBox .BRight_khung {
+}
+.SummaryInfoBox .BCenter_khung {
+}
+.SummaryInfoBox .BorderLeft_khung {
+    background: url("images/border.gif") repeat-y scroll left center #FFFFFF;
+}
+.SummaryInfoBox .BorderRight_khung {
+    background: url("images/border.gif") repeat-y scroll right center #FFFFFF;
+}

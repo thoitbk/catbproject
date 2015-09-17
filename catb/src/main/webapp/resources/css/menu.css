@@ -1,0 +1,420 @@
+
+.menutitleHCM
+{
+	background: url( "../images/BgLeftHCM.png" ) repeat-x	;
+	border-radius: 0px 0px 4px 0px;
+	box-shadow: 0 1px 2px #5A96F1;
+	cursor: pointer;
+	margin-bottom: 0px;
+	color: #FFFFFF;
+	width: 265px;
+	line-height: 29px;
+	padding: 0px 0 0px 30px;
+	margin-left: 6px;
+	text-align: left;
+	vertical-align: middle;
+	font-weight: bold; /*/*/
+	text-transform: uppercase;
+	text-align:center;	
+}
+.submenuHCM
+{
+	border:solid 1px #FE7E01;
+	margin:0px 0px 0px 6px;
+	padding-left: 1px;
+	line-height: 22px;
+	width: 292px;
+	border-radius: 0px 0px 4px 0px;
+	box-shadow: 0 1px 2px #5A96F1;
+}
+.submenuHCM a:link, .submenuHCM a:visited, .submenuHCM a:hover, .submenuHCM a:active
+{
+	background: url( "../images/List.png" ) no-repeat;
+	padding-left: 19px;
+	color: #47494B;
+	text-decoration: none;
+	font-weight: bold; /*/*/
+}
+.menutitle
+{
+	
+	
+	/*background: url( "/Images/CoDang.png" ) no-repeat;
+	  background: #FE7E01 url(/Images/CoDang.png) no-repeat 5px center;	
+	background: url( "/Images/BgLeftMenu.png" ) repeat-x	;*/
+	vertical-align: middle;
+	cursor: pointer;
+	color: #FFFFFF;
+	height: 29px;
+	line-height: 29px;
+	padding: 0px 1px 0px 0px;
+
+	text-align: left;
+	
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.MenutitleC
+{
+	background: #2890B5 ;
+	float:left;
+	height: 29px;
+	width:100%;
+	margin:2px 0px 2px 0px;
+	padding: 0px 0px 0px 5px;
+	
+}
+.home
+{
+	width:3%;
+	text-align:center;
+}
+.submenu
+{
+	 /*border:solid 1px #FE7E01;padding-left: 1px;margin-bottom: 2px;border-radius: 0px 0px 4px 0px;
+	box-shadow: 0 1px 2px #5A96F1;*/
+	line-height: 22px;
+	margin-left: 0px;
+}
+.submenu a:link, .submenu a:visited, .submenu a:hover, .submenu a:active
+{
+	background: url( "../images/List.png" ) no-repeat;
+	padding: 0px 0px 0px 18px;
+	color: #47494B;
+	text-decoration: none;
+	font-weight: bold; /*border-radius: 0px 0px 4px 4px;
+	box-shadow: 0 1px 2px #999999;*/
+	width:99%;
+}
+#menu_left {
+            width: 99%;
+            margin:1px auto;
+			border: 1px solid #999999;
+        }
+#menu_left       .active {
+            background: #dfdfdf url(../images/logo1.png) no-repeat 5px center;
+        }
+#menu_left       dl  
+{
+			margin:1px auto;
+            width: 99%;
+            overflow:hidden;
+        }
+        
+#menu_left       dt{
+            background: #FFFFFF url(../images/logo1.png) no-repeat 5px center;
+            border-bottom: 1px solid white;
+            font-size: 11px; 
+            font-weight:bold;
+            padding: 5px 0px;
+            text-transform: none;
+            line-height:20px;
+            
+        }
+        
+#menu_left       dt a {
+            color: Black;
+            text-decoration: none;
+            padding: 0px 18px;
+        }
+#menu_left      dd 
+{
+			width: 99%;
+            margin:1px auto;
+            
+        }       
+#menu_left      dd a {
+            color: black;
+        }
+        
+#menu_left    ul {
+            list-style: none;
+            font-size: 11px; 
+            margin:0 auto;
+        }
+#menu_left    li a{
+            background: url( "../images/List.png" ) no-repeat;
+			padding: 0px 0px 0px 18px;
+			color: Black;
+			text-decoration: none;
+			font-weight: bold; 
+			width:99%;
+			
+			
+        }
+/*------------#topMenu------------------*/
+#topMenu
+{
+	background: #2890b5;
+	width:100%;
+	height:28px;
+	margin:0;
+	padding:0;
+
+}
+#topMenu       dl  
+{
+			margin:0px auto;
+            width: 100%;
+            overflow:hidden; 
+            
+        }
+#topMenu       dt{
+            height: 28px;
+	        float: left;
+	        border-left:1px solid #dfdfdf;
+	        border-radius: 4px 4px 4px 4px;
+	        position:relative;
+        }   
+#topMenu    dt a {
+    margin-right:1px;
+    padding-left:2px;
+    cursor:pointer;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 11px;
+    font-weight: bold;
+	text-decoration: none;
+	height: 28px;
+    width:100%;
+    display: inline-block;
+    color: #FFF;
+	position:relative;
+        }  
+#topMenu dt a:hover, #topMenu dt a:active, #topMenu dt a:focus
+{
+    clear:both;
+	height: 28px;
+	width:100%;
+	color: Black;
+	background:#9EDCF2;
+	border-radius: 4px 4px 0px 0px;
+}
+#topMenu .active
+{
+    background:#9EDCF2;
+	color:Black;
+	border-radius: 4px 4px 0px 0px;
+}  
+#topMenu      dd 
+{
+			margin:0 auto;
+			padding:0 auto;
+			width:50%;
+			height: auto;
+			display:none;
+        }     
+#topMenu      dd  ul {
+            list-style: none;
+            font-size: 11px; 
+            margin:0 auto;
+            position:relative;
+        }
+#topMenu      dd  li
+{
+	height: 28px;
+	float: left;
+	border-left:1px solid #dfdfdf;
+	border-radius: 4px 4px 4px 4px;
+
+}       
+#topMenu      dd    li a{
+            background: url( "../images/List.png" ) no-repeat;
+			padding: 0px 0px 0px 18px;
+			color: Black;
+			text-decoration: none;
+			font-weight: bold; 
+			width:99%;
+        }  
+.active
+{
+    background:#9EDCF2;
+	color:Black;
+
+} 
+.parent 
+{
+    background:#2890B5;
+	color:Black;
+} 
+#menu {
+    position:relative;
+    z-index:100;
+    height:28px;
+    background: transparent url(../images/bg_menu.jpg) repeat-x;
+}
+#menu .menu {
+    position:absolute;
+    background: url(../images/header.gif) right top no-repeat; 
+}
+.menu * {
+    list-style:none;
+    border:0;
+    padding:0;
+    margin:0;
+    text-decoration:none;
+}
+#menu a {
+    display:block;
+    height:28px;
+    vertical-align:middle;
+}
+#menu Ul{
+    background:#fff;
+    text-align:justify;
+}
+#menu Ul li{
+	float:left;
+    padding:0px 3px 0px 2px;
+    border-right:1px solid #dfdfdf;
+}
+/**********************************************************************************/
+#menu>ul>li:hover
+    {
+        background: url("../images/btn_left.jpg") no-repeat scroll left top rgba(0, 0, 0, 0);
+        padding:0px 0px 0px 2px;
+        height:30px;
+        }
+
+#menu>ul>li:hover>a {
+    background: url("../images/btn_center.png") repeat-x center 0 rgba(0, 0, 0, 0);
+    color:#CACFD3;
+    height:30px;
+}
+#menu>ul>li:hover>a span   
+{
+    background: url("../images/btn_right.jpg") no-repeat right top rgba(0, 0, 0, 0);
+    height:26px;
+                           }
+#menu li li {
+    float:none;
+}
+#menu div {
+    visibility:hidden;
+    position:absolute;
+    background:#9EDCF2;
+    width:auto;
+    height:28px;
+}
+#menu div div {
+    margin:-35px 0 0 -1px;
+    left:100%;
+}
+#menu div div div {
+    margin:-35px 0 0 -1px;
+    left:100%;
+}
+#menu li:hover>div { visibility:visible; }
+
+#menu a {
+    
+    color:#ffffff;
+    position:relative;
+    z-index:77;
+}
+
+#menu li.current a {
+    background: transparent url(../images/header_active.gif) repeat-x;
+    color:#3C4955;
+}
+#menu li.current span {
+    color:#3C4955;
+}
+
+#menu span 
+{
+    text-align:center;
+    cursor:pointer;
+	height: 26px;
+    width:100%;
+    text-transform:none;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    font-weight:bold;
+    text-decoration:none;
+    color:#ffffff;
+    display: inline-block;
+	padding:4px 0px 0px 0px;
+}
+#menu ul ul 
+{
+	width: 100%;
+	background:#0148AF;}
+#menu li li{
+	  background:#0148AF url("../images/arrow.png") no-repeat 5px center;
+	  float:left;
+	  padding:0px 10px 0px 10px;
+	  }
+#menu li li a {
+    position:static;
+    white-space:normal;
+    text-align: center;
+    color:#FFF;
+    padding:0;
+	text-transform:none;
+	width: 100%;
+}
+#menu ul li ul li a.parent span
+{
+	clear:both;
+	height:28px;
+	
+	vertical-align:middle;
+}
+#menu li.current li a {
+    background: none;
+    color:#FFF;
+}
+#menu li.current li span {
+    color:#FFF;
+}
+#menu li li:hover 
+{
+	 background:#9EDCF2 url("../images/arrow.png") no-repeat 5px center; }
+#menu li li a span  
+{
+	color:#fff; line-height: 15px;	}
+#menu li li a:hover span 
+{
+	 color:Black; 
+	 background:#9EDCF2;}
+#menu li li a.parent span
+{
+	
+	background:#9EDCF2;
+	 z-index:10;  }
+
+#menu li li span {
+    display:block;
+    text-transform:none;
+    border-radius: 8px 8px 4px 4px;
+    font-size:11px;
+    letter-spacing: 0;
+}
+/*********menuRight********/
+#menuRight
+{
+    padding: auto;
+	margin: auto;
+	width: 99%;
+	border-right:1px solid #dfdfdf;
+    border-radius: 4px 4px 4px 4px;
+}
+#menuRight ul
+{
+    padding: auto;
+	margin: auto;
+	width: 99%;
+	border-right:1px solid #dfdfdf;
+    border-radius: 4px 4px 4px 4px;
+}
+#menuRight a
+{
+    color:Black;
+}
+#menuRight ul li {
+    line-height: 30px;
+    list-style: none outside none;
+    margin: 0 auto;
+    padding-left: 10px;
+    text-decoration: none;
+}

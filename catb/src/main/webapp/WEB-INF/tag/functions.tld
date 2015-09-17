@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>1.2</jsp-version>
+	<short-name>f</short-name>
+	
+	<!-- Getting menuId and memuItemId being selected based on requested url -->
+	<function>
+		<name>getActiveMenuId</name>
+		<function-class>com.catb.web.tag.TagFunction</function-class>
+		<function-signature>java.lang.String[] getActiveMenuId(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<!-- Comparing current menuId and selected menuId to return class -->
+	<function>
+		<name>getMenuClass</name>
+		<function-class>com.catb.web.tag.TagFunction</function-class>
+		<function-signature>java.lang.String getMenuClass(java.lang.String, java.lang.String, java.lang.String)</function-signature>
+	</function>
+	
+	<!-- get rid of diacritics and hyphenate string -->
+	<function>
+		<name>toFriendlyUrl</name>
+		<function-class>com.catb.web.tag.TagFunction</function-class>
+		<function-signature>java.lang.String toFriendlyUrl(java.lang.String)</function-signature>
+	</function>
+</taglib>

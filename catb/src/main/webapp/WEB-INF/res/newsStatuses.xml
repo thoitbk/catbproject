@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<newsStatuses>
+	<newsStatus>
+		<code>0</code>
+		<name>Tin chờ duyệt</name>
+	</newsStatus>
+	<newsStatus>
+		<code>1</code>
+		<name>Tin đã duyệt</name>
+	</newsStatus>
+	<newsStatus>
+		<code>2</code>
+		<name>Tin bị từ chối</name>
+	</newsStatus>
+</newsStatuses>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menus>
+	<menu id="info">
+		<menuItem id="info_1">
+			<link>/cm/news/create</link>
+		</menuItem>
+		<menuItem id="info_2">
+			<link>/cm/news/manage</link>
+			<link>/cm/news/update</link>
+		</menuItem>
+		<menuItem id="info_3">
+			<link>/cm/news/approve</link>
+			<link>/cm/news/update</link>
+		</menuItem>
+		<menuItem id="info_4">
+			<link>/cm/newsCatalog/add</link>
+			<link>/cm/newsCatalog/update</link>
+		</menuItem>
+	</menu>
+	<menu id="doc">
+		<menuItem id="doc_1">
+			<link>/cm/administrativeProcedure/add</link>
+			<link>/cm/administrativeProcedure/update</link>
+		</menuItem>
+		<menuItem id="doc_2">
+			<link>/cm/document/add</link>
+			<link>/cm/document/update</link>
+		</menuItem>
+	</menu>
+	<menu id="question">
+		<menuItem id="question_1">
+			<link>/cm/qaCatalog/add</link>
+			<link>/cm/qaCatalog/update</link>
+		</menuItem>
+		<menuItem id="question_2">
+			<link>/cm/comment/show</link>
+			<link>/cm/comment/answer</link>
+		</menuItem>
+		<menuItem id="question_3">
+			<link>/cm/denouncement/show</link>
+			<link>/cm/denouncement/reply</link>
+		</menuItem>
+	</menu>
+	<menu id="media">
+		<menuItem id="media_1">
+			<link>/cm/imageCatalog/add</link>
+			<link>/cm/imageCatalog/update</link>
+		</menuItem>
+		<menuItem id="media_2">
+			<link>/cm/videoCatalog/add</link>
+			<link>/cm/videoCatalog/update</link>
+		</menuItem>
+		<menuItem id="media_3">
+			<link>/cm/image/add</link>
+			<link>/cm/image/update</link>
+		</menuItem>
+		<menuItem id="media_4">
+			<link>/cm/video/add</link>
+			<link>/cm/video/update</link>
+		</menuItem>
+	</menu>
+	<menu id="other">
+		<menuItem id="other_1">
+			<link>/cm/linkCatalog/add</link>
+			<link>/cm/linkCatalog/update</link>
+		</menuItem>
+		<menuItem id="other_2">
+			<link>/cm/adv/add</link>
+			<link>/cm/adv/update</link>
+		</menuItem>
+	</menu>
+	<menu id="catalog">
+		<menuItem id="catalog_1">
+			<link>/cm/position/add</link>
+			<link>/cm/position/update</link>
+		</menuItem>
+		<menuItem id="catalog_2">
+			<link>/cm/department/add</link>
+			<link>/cm/department/update</link>
+		</menuItem>
+		<menuItem id="catalog_3">
+			<link>/cm/documentType/add</link>
+			<link>/cm/documentType/update</link>
+		</menuItem>
+		<menuItem id="catalog_4">
+			<link>/cm/field/add</link>
+			<link>/cm/field/update</link>
+		</menuItem>
+	</menu>
+	<menu id="system">
+		<menuItem id="system_1">
+			<link>/cm/user/add</link>
+			<link>/cm/user/update</link>
+		</menuItem>
+		<menuItem id="system_2">
+			<link>/cm/manageUserRole</link>
+			<link>/cm/assignRoleToUser</link>
+			<link>/cm/revokeRoleFromUser</link>
+		</menuItem>
+		<menuItem id="system_3">
+			<link>/cm/showPermission</link>
+			<link>/cm/changePermission</link>
+		</menuItem>
+		<menuItem id="system_4">
+			<link>/cm/role/add</link>
+			<link>/cm/role/update</link>
+		</menuItem>
+		<menuItem id="system_6">
+			<link>/cm/user/edit</link>
+		</menuItem>
+		<menuItem id="system_7">
+			<link>/cm/permission/add</link>
+			<link>/cm/permission/update</link>
+		</menuItem>
+		<menuItem id="system_8">
+			<link>/cm/configurations</link>
+			<link>/cm/configurations/update</link>
+		</menuItem>
+	</menu>
+</menus>
