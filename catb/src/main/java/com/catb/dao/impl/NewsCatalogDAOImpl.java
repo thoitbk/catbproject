@@ -113,7 +113,8 @@ public class NewsCatalogDAOImpl implements NewsCatalogDAO {
 	public List<NewsCatalog> getNewsCatalogs(Boolean display, Boolean specialSite) {
 		Session session = sessionFactory.getCurrentSession();
 		String select = "SELECT c FROM NewsCatalog c " + 
-						"WHERE c.display = :display AND c.specialSite = :specialSite";
+						"WHERE c.display = :display AND c.specialSite = :specialSite " + 
+						"ORDER BY sqNumber ASC, id ASC";
 		
 		Query query = session.createQuery(select);
 		query.setParameter("display", display);

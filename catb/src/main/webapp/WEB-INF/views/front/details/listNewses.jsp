@@ -10,7 +10,15 @@
 	</div>
 	<c:forEach items="${newses}" var="news">
 		<div class="TinCT">
-			<a href="${news_ct}/${url}/${news.id}/${f:toFriendlyUrl(news.title)}"><img class="list_thumb" src="${news.image}" border="0"></a>
+			<c:choose>
+				<c:when test="${not empty news.image}">
+					<c:set var="img" value="${news.image}" scope="request"></c:set>
+				</c:when>
+				<c:otherwise>
+					<c:set var="img" value="${ct}/resources/images/default.png" scope="request"></c:set>
+				</c:otherwise>
+			</c:choose>
+			<a href="${news_ct}/${url}/${news.id}/${f:toFriendlyUrl(news.title)}"><img class="list_thumb" src="${img}" border="0"></a>
 			<p class="title">
 				<a href="${news_ct}/${url}/${news.id}/${f:toFriendlyUrl(news.title)}">${news.title}</a>
 				<fmt:formatDate var="postedDate" value="${news.postedDate}" pattern="dd/MM/yyyy" />
