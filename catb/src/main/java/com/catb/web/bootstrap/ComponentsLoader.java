@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.catb.bo.AdCatalogBO;
+import com.catb.bo.DepartmentBO;
 import com.catb.bo.LinkCatalogBO;
 import com.catb.common.Constants;
 import com.catb.dao.statics.ResReader;
@@ -30,6 +31,9 @@ public class ComponentsLoader {
 	
 	@Autowired
 	private AdCatalogBO adCatalogBO;
+	
+	@Autowired
+	private DepartmentBO departmentBO;
 	
 	private ServletContext context;
 
@@ -69,6 +73,8 @@ public class ComponentsLoader {
 			context.setAttribute("LINK_LIST", linkCatalogBO.getLinkCatalogs());
 			logger.info("Loading advertisements");
 			context.setAttribute("ADVERTISEMENTS_LIST", adCatalogBO.getDisplayedAdCatalogs(Constants.MAX_ADS_NUM));
+			logger.info("Loading departments");
+			context.setAttribute("DEPARTMENTS_LIST", departmentBO.getDepartments());
 			
 			logger.info("Creating required directories...");
 			Util.createFolder(Constants.ADMINISTRATIVE_PROCEDURE_LOCATION);

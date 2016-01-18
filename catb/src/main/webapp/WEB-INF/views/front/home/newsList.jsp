@@ -15,8 +15,14 @@
 </script>
 
 <div id="MainDMTin">
-	<div id="Khau_HieuKH">
-		<img src="${ct}/resources/images/slogan.JPG" width="100%" height="100%" />
+	<div id="">
+		<div>
+			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" height="85" width="730">
+			<param name="movie" value="/images/advertise/bannertrungtam_1312011_154213.swf">
+			<param name="quality" value="high">
+			<param name="wmode" value="transparent">
+			<embed wmode="transparent" src="${ct}/resources/images/khauhieu.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" height="85" width="730"></object>
+		</div>
 	</div>
 	<c:if test="${fn:length(specialSiteInfos) > 0}">
 		<div id="special_sites">

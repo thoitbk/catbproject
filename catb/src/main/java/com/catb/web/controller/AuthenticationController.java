@@ -23,8 +23,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
+import com.catb.bo.DepartmentBO;
 import com.catb.bo.UserBO;
 import com.catb.common.PropertiesUtil;
+import com.catb.model.Department;
 import com.catb.model.User;
 import com.catb.vo.UserInfo;
 import com.catb.web.util.Util;
@@ -36,6 +38,9 @@ public class AuthenticationController {
 	
 	@Autowired
 	private UserBO userBO;
+	
+	@Autowired
+	private DepartmentBO departmentBO;
 	
 	@RequestMapping(value = "/cm/login", method = RequestMethod.GET)
 	public ModelAndView showLogin() {
@@ -75,6 +80,12 @@ public class AuthenticationController {
 			User user = userBO.getUserByUsername(username);
 			if (user != null) {
 				UserInfo userInfo = new UserInfo(user.getId(), user.getUsername(), user.getFullName(), user.getGender());
+				Department department = departmentBO.getDepartmentByUserId(user.getId());
+				if (department != null) {
+					userInfo.setDepartmentId(department.getId());
+					userInfo.setDepartmentCode(department.getCode());
+					userInfo.setDepartmentName(department.getName());
+				}
 				request.getSession().setAttribute("userInfo", userInfo);
 			} else {
 				UserInfo userInfo = new UserInfo(null, "Admin", "Admin", true);

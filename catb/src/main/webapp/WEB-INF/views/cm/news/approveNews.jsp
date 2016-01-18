@@ -169,7 +169,7 @@
 		</c:forEach>
 		<tr>
 			<td colspan="9" style="text-align: right; background-color: #FFF; padding: 0.7em;">
-				<exTag:paging pageInfo="${pageInfo}" link="${ct}/cm/news/manage" cssClass="page_link" params="${params}" />
+				<exTag:paging pageInfo="${pageInfo}" link="${ct}/cm/news/approve" cssClass="page_link" params="${params}" />
 			</td>
 		</tr>
 	    <tr>

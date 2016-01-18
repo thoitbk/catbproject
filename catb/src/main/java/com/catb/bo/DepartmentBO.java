@@ -11,4 +11,5 @@ public interface DepartmentBO {
 	public Department getDepartmentById(Integer id);
 	public void updateDepartment(Department department);
 	public void deleteDepartments(Integer[] ids);
+	public Department getDepartmentByUserId(Integer userId);
 }

@@ -47,6 +47,9 @@ public class Department implements Serializable {
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "department")
 	private Set<User> users = new HashSet<User>();
 	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "department")
+	private Set<Schedule> schedules = new HashSet<Schedule>();
+	
 	public Department() {
 		
 	}
@@ -141,5 +144,13 @@ public class Department implements Serializable {
 
 	public void setUsers(Set<User> users) {
 		this.users = users;
+	}
+
+	public Set<Schedule> getSchedules() {
+		return schedules;
+	}
+
+	public void setSchedules(Set<Schedule> schedules) {
+		this.schedules = schedules;
 	}
 }

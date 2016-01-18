@@ -65,6 +65,8 @@ public class DepartmentController {
 			departmentBO.addDepartment(department);
 			request.getSession().setAttribute("msg", PropertiesUtil.getProperty("department.created.success"));
 			
+			updateDepartmentList(request);
+			
 			return new ModelAndView(new RedirectView(request.getContextPath() + "/cm/department/add"));
 		}
 	}
@@ -111,6 +113,8 @@ public class DepartmentController {
 			departmentBO.updateDepartment(department);
 			request.getSession().setAttribute("msg", PropertiesUtil.getProperty("department.updated.success"));
 			
+			updateDepartmentList(request);
+			
 			return new ModelAndView(new RedirectView(request.getContextPath() + "/cm/department/add"));
 		}
 	}
@@ -118,10 +122,17 @@ public class DepartmentController {
 	@RequiresPermissions(value = {"department:manage"})
 	@RequestMapping(value = "/cm/department/delete", method = RequestMethod.POST)
 	@ResponseBody
-	public Status deleteDepartment(@RequestParam("ids") Integer[] ids, HttpSession session) {
+	public Status deleteDepartment(@RequestParam("ids") Integer[] ids, HttpSession session, HttpServletRequest request) {
 		departmentBO.deleteDepartments(ids);
 		session.setAttribute("msg", PropertiesUtil.getProperty("department.deleted.success"));
 		Status status = new Status(Status.OK, "ok");
+		
+		updateDepartmentList(request);
+		
 		return status;
+	}
+	
+	private void updateDepartmentList(HttpServletRequest request) {
+		request.getServletContext().setAttribute("DEPARTMENTS_LIST", departmentBO.getDepartments());
 	}
 }

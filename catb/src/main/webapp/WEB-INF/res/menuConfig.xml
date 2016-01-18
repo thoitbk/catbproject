@@ -87,6 +87,11 @@
 			<link>/cm/field/update</link>
 		</menuItem>
 	</menu>
+	<menu id="schedule">
+		<menuItem id="schedule_1">
+			<link>/cm/schedule/add</link>
+		</menuItem>
+	</menu>
 	<menu id="system">
 		<menuItem id="system_1">
 			<link>/cm/user/add</link>

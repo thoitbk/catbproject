@@ -49,6 +49,14 @@
 		</div>
 	</div>
 </c:if>
+<div id="Lien_Ket_Web">
+	<select name="linkSites" id="linkSites" class="ddl">
+		<option value="">------ Lịch công tác ------</option>
+		<c:forEach items="${DEPARTMENTS_LIST}" var="department">
+			<option value="${ct}/lich-cong-tac/?dId=${department.id}" class="blank">${department.code}</option>
+		</c:forEach>
+	</select>
+</div>
 
 <link href="${ct}/resources/css/jquery-ui-tab.css" rel="stylesheet" type="text/css" />
 

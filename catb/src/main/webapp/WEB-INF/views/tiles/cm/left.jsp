@@ -179,6 +179,20 @@
 				</ul>
 			</li>
 		</s:hasAnyPermission>
+		<s:hasAnyPermission name="schedule:manage">
+			<li class="item ${f:getMenuClass(menuId, 'schedule', 'selected_item')}" id="schedule">
+				<img src="${ct}/resources/images/link.png" class="icon_menu" />
+				<h3>Lịch công tác</h3>
+				<ul class="child">
+					<shiro:hasPermission name="schedule:manage">
+						<li id="schedule_1" class="${f:getMenuClass(menuItemId, 'schedule_1', 'selected_subitem')}">
+							<img src="${ct}/resources/images/add_news.gif" class="bullet_menu" />
+							<a href="${ct}/cm/schedule/add">Quản trị lịch công tác</a>
+						</li>
+					</shiro:hasPermission>
+				</ul>
+			</li>
+		</s:hasAnyPermission>
 		<s:hasAnyPermission name="user:manage, role:assign, permission:assign, role:manage, user:search, user:editSelf, permission:manage, configuration:manage, ui:manage">
 			<li class="item ${f:getMenuClass(menuId, 'system', 'selected_item')}" id="system">
 				<img src="${ct}/resources/images/system.png" class="icon_menu" />

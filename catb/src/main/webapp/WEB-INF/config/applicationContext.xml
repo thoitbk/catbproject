@@ -60,6 +60,7 @@
 				<value>com.catb.model.Role</value>
 				<value>com.catb.model.Video</value>
 				<value>com.catb.model.VideoCatalog</value>
+				<value>com.catb.model.Schedule</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
@@ -141,6 +142,9 @@
 		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
 	</bean>
 	<bean id="adCatalogDAO" class="com.catb.dao.impl.AdCatalogDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="scheduleDAO" class="com.catb.dao.impl.ScheduleDAOImpl">
 		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
 	</bean>
 	

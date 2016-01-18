@@ -2,6 +2,7 @@ package com.catb.web.util;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
@@ -52,5 +53,34 @@ public class Util {
 		if (!file.exists()) {
 			file.mkdir();
 		}
+	}
+	
+	public static Date getFirstDayOfCurrentWeek() {
+		Calendar cal = Calendar.getInstance();
+		int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
+		int offset = 0;
+		if (dayOfWeek == 1) {
+			offset = 6;
+		} else {
+			offset = dayOfWeek - 2;
+		}
+		
+		cal.add(Calendar.DATE, -offset);
+		
+		return cal.getTime();
+	}
+	
+	public static int getDayOffset() {
+		Calendar cal = Calendar.getInstance();
+		int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
+		
+		int offset = 0;
+		if (dayOfWeek == 1) {
+			offset = 6;
+		} else {
+			offset = dayOfWeek - 2;
+		}
+		
+		return offset;
 	}
 }
