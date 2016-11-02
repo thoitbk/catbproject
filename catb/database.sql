@@ -527,3 +527,13 @@ CREATE TABLE `video_catalog` (
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2015-02-04 16:11:05
+
+--
+-- Dumping data for table `permission`
+--
+
+LOCK TABLES `permission` WRITE;
+/*!40000 ALTER TABLE `permission` DISABLE KEYS */;
+INSERT INTO `permission` VALUES (1,'Quảng cáo','ad:manage',''),(2,'Thủ tục hành chính','administrativeProcedure:manage',''),(3,'Bình luận','comment:manage',''),(4,'Cấu hình','configuration:manage',''),(5,'Tố giác tội phạm','criminalDenouncement:manage',''),(6,'Phòng ban','department:manage',''),(7,'Tài liệu','document:manage',''),(8,'Loại tài liệu','documentType:manage',''),(9,'Lĩnh vực','field:manage',''),(10,'Quyền','permission:assign',''),(11,'Vai trò','role:assign',''),(12,'Danh mục ảnh','imageCatalog:manage',''),(13,'Ảnh','image:manage',''),(14,'Link','link:manage',''),(15,'Mục tin','newsCatalog:manage',''),(16,'Tạo tin','news:create',''),(17,'Quản lý tin','news:manage',''),(18,'Duyệt tin','news:approve',''),(19,'Quản lý quyền','permission:manage',''),(20,'Vị trí','position:manage',''),(21,'Danh mục hỏi đáp','qaCatalog:manage',''),(22,'Quản lý vai trò','role:manage',''),(23,'Người dùng','user:manage',''),(24,'Sửa thông tin cá nhân','user:editSelf',''),(25,'Danh mục video','videoCatalog:manage',''),(26,'Video','video:manage','');
+/*!40000 ALTER TABLE `permission` ENABLE KEYS */;
+UNLOCK TABLES;

@@ -17,45 +17,47 @@
 	<div class="DanhMuc">
 		<strong>THƯ VIỆN ẢNH</strong>
 	</div>
-	<table style="margin-top: 30px; margin-left: 20px; margin-right: 20px; width: 100%;">
-		<c:forEach begin="0" end="${fn:length(imageGalleries) - 1}" step="3" var="index">
-			<tr>
-				<td style="width: 33%; padding: 5px; text-align: center; vertical-align: top;">
-					<c:if test="${index < fn:length(imageGalleries)}">
-						<c:set var="imageGallery" value="${imageGalleries[index]}" scope="request"></c:set>
-						<span title='cssbody=[boxbody] singleclickstop=[on] cssheader=[boxheader] header=[${imageGallery.imageCatalog.name}]  body=[${imageGallery.imageCatalog.description}<br/>]'>
-							<a href="javascript:void(0);" rel="${ct}/thu-vien-anh/${imageGallery.imageCatalog.id}/${f:toFriendlyUrl(imageGallery.imageCatalog.name)}" class="image_gallery_title">
-								<img alt="" src="${imageGallery.images[0].file}" class="image_gallery_thumb" /><br />
-								<span>${imageGallery.imageCatalog.name}</span>
-							</a>
-						</span>
-					</c:if>
-				</td>
-				<td style="width: 33%; padding: 5px; text-align: center; vertical-align: top;">
-					<c:if test="${index + 1 < fn:length(imageGalleries)}">
-						<c:set var="imageGallery" value="${imageGalleries[index + 1]}" scope="request"></c:set>
-						<span title='cssbody=[boxbody] singleclickstop=[on] cssheader=[boxheader] header=[${imageGallery.imageCatalog.name}]  body=[${imageGallery.imageCatalog.description}<br/>]'>
-							<a href="javascript:void(0);" rel="${ct}/thu-vien-anh/${imageGallery.imageCatalog.id}/${f:toFriendlyUrl(imageGallery.imageCatalog.name)}" class="image_gallery_title">
-								<img alt="" src="${imageGallery.images[0].file}" class="image_gallery_thumb" /><br />
-								<span>${imageGallery.imageCatalog.name}</span>
-							</a>
-						</span>
-					</c:if>
-				</td>
-				<td style="width: 33%; padding: 5px; text-align: center; vertical-align: top;">
-					<c:if test="${index + 2 < fn:length(imageGalleries)}">
-						<c:set var="imageGallery" value="${imageGalleries[index + 2]}" scope="request"></c:set>
-						<span title='cssbody=[boxbody] singleclickstop=[on] cssheader=[boxheader] header=[${imageGallery.imageCatalog.name}]  body=[${imageGallery.imageCatalog.description}<br/>]'>
-							<a href="javascript:void(0);" rel="${ct}/thu-vien-anh/${imageGallery.imageCatalog.id}/${f:toFriendlyUrl(imageGallery.imageCatalog.name)}" class="image_gallery_title">
-								<img alt="" src="${imageGallery.images[0].file}" class="image_gallery_thumb" /><br />
-								<span>${imageGallery.imageCatalog.name}</span>
-							</a>
-						</span>
-					</c:if>
-				</td>
-			</tr>
-		</c:forEach>
-	</table>
+	<c:if test="${fn:length(imageGalleries) > 0}">
+		<table style="margin-top: 30px; margin-left: 20px; margin-right: 20px; width: 100%;">
+			<c:forEach begin="0" end="${fn:length(imageGalleries) - 1}" step="3" var="index">
+				<tr>
+					<td style="width: 33%; padding: 5px; text-align: center; vertical-align: top;">
+						<c:if test="${index < fn:length(imageGalleries)}">
+							<c:set var="imageGallery" value="${imageGalleries[index]}" scope="request"></c:set>
+							<span title='cssbody=[boxbody] singleclickstop=[on] cssheader=[boxheader] header=[${imageGallery.imageCatalog.name}]  body=[${imageGallery.imageCatalog.description}<br/>]'>
+								<a href="javascript:void(0);" rel="${ct}/thu-vien-anh/${imageGallery.imageCatalog.id}/${f:toFriendlyUrl(imageGallery.imageCatalog.name)}" class="image_gallery_title">
+									<img alt="" src="${imageGallery.images[0].file}" class="image_gallery_thumb" /><br />
+									<span>${imageGallery.imageCatalog.name}</span>
+								</a>
+							</span>
+						</c:if>
+					</td>
+					<td style="width: 33%; padding: 5px; text-align: center; vertical-align: top;">
+						<c:if test="${index + 1 < fn:length(imageGalleries)}">
+							<c:set var="imageGallery" value="${imageGalleries[index + 1]}" scope="request"></c:set>
+							<span title='cssbody=[boxbody] singleclickstop=[on] cssheader=[boxheader] header=[${imageGallery.imageCatalog.name}]  body=[${imageGallery.imageCatalog.description}<br/>]'>
+								<a href="javascript:void(0);" rel="${ct}/thu-vien-anh/${imageGallery.imageCatalog.id}/${f:toFriendlyUrl(imageGallery.imageCatalog.name)}" class="image_gallery_title">
+									<img alt="" src="${imageGallery.images[0].file}" class="image_gallery_thumb" /><br />
+									<span>${imageGallery.imageCatalog.name}</span>
+								</a>
+							</span>
+						</c:if>
+					</td>
+					<td style="width: 33%; padding: 5px; text-align: center; vertical-align: top;">
+						<c:if test="${index + 2 < fn:length(imageGalleries)}">
+							<c:set var="imageGallery" value="${imageGalleries[index + 2]}" scope="request"></c:set>
+							<span title='cssbody=[boxbody] singleclickstop=[on] cssheader=[boxheader] header=[${imageGallery.imageCatalog.name}]  body=[${imageGallery.imageCatalog.description}<br/>]'>
+								<a href="javascript:void(0);" rel="${ct}/thu-vien-anh/${imageGallery.imageCatalog.id}/${f:toFriendlyUrl(imageGallery.imageCatalog.name)}" class="image_gallery_title">
+									<img alt="" src="${imageGallery.images[0].file}" class="image_gallery_thumb" /><br />
+									<span>${imageGallery.imageCatalog.name}</span>
+								</a>
+							</span>
+						</c:if>
+					</td>
+				</tr>
+			</c:forEach>
+		</table>
+	</c:if>
 </div>
 
 <script type="text/javascript" src="${ct}/resources/js/imageGallery.js"></script>
