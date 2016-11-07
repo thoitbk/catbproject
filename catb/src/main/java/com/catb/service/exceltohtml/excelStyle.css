@@ -1,0 +1,75 @@
+.excelDefaults {
+	font-family: "Times New Roman", Times, serif !important;
+	word-wrap: break-word;
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	direction: ltr;
+	text-transform: none;
+	text-indent: 0;
+	letter-spacing: 0;
+	word-spacing: 0;
+	white-space: normal;
+	unicode-bidi: normal;
+	vertical-align: 0;
+	background-image: none;
+	text-shadow: none;
+	list-style-image: none;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	border-collapse: collapse;
+	white-space: pre-line;
+	vertical-align: bottom;
+	font-style: normal;
+	font-family: sans-serif;
+	font-variant: normal;
+	font-weight: normal;
+	font-size: 10pt;
+	text-align: right;
+}
+
+.excelDefaults td {
+	padding: 1px 5px;
+	border: 1px solid silver;
+}
+
+.excelDefaults .colHeader {
+	background-color: silver;
+	font-weight: bold;
+	border: 1px solid black;
+	text-align: center;
+	padding: 1px 5px;
+}
+
+.excelDefaults .rowHeader {
+	background-color: silver;
+	font-weight: bold;
+	border: 1px solid black;
+	text-align: right;
+	padding: 1px 5px;
+}
+
+.excelDefaults tr td:first-child {
+	width: 8%;
+}
+
+.excelDefaults tr td:nth-child(2) {
+	width: 7%;
+}
+
+.excelDefaults tr td:nth-child(3) {
+	width: 15%;
+}
+
+.excelDefaults tr td:nth-child(4) {
+	width: 45%;
+}
+
+.excelDefaults tr td:nth-child(5) {
+	width: 15%;
+}
+
+.excelDefaults tr td:nth-child(6) {
+	width: 10%;
+}
