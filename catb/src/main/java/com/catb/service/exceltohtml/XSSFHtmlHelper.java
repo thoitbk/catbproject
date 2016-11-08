@@ -6,11 +6,6 @@ import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFColor;
 
-/**
- * Implementation of {@link HtmlHelper} for XSSF files.
- *
- * @author Ken Arnold, Industrious Media LLC
- */
 public class XSSFHtmlHelper implements HtmlHelper {
 	
     public void colorStyles(CellStyle style, Formatter out) {

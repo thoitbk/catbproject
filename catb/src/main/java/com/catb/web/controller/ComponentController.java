@@ -56,8 +56,9 @@ public class ComponentController {
 //		NewsCatalog administrativeProcedures = new NewsCatalog(PropertiesUtil.getProperty("administrativeProcedures.name"), Constants.ADMINISTRATIVE_PROCEDURE_URL);
 		NewsCatalog document = new NewsCatalog(PropertiesUtil.getProperty("document.name"), Constants.DOCUMENT_URL);
 		NewsCatalog contacts = new NewsCatalog("Danh bạ điện thoại", "danh-ba/danh-ba.xls");
+		NewsCatalog schedule = new NewsCatalog("Lịch công tác lãnh đạo Công an tỉnh", "lich-lanh-dao");
 //		List<NewsCatalog> columns = new LinkedList<NewsCatalog>(Arrays.asList(comment, criminalDenouncement, administrativeProcedures, document));
-		List<NewsCatalog> columns = new LinkedList<NewsCatalog>(Arrays.asList(contacts, document));
+		List<NewsCatalog> columns = new LinkedList<NewsCatalog>(Arrays.asList(contacts, schedule, document));
 		List<Image> images = imageBO.getImages(Constants.IMAGE_AMOUNT);
 		
 		model.addAttribute("rightTopNewsCatalogs", rightTopNewsCatalogs);

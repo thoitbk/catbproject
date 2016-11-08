@@ -61,6 +61,7 @@
 				<value>com.catb.model.Video</value>
 				<value>com.catb.model.VideoCatalog</value>
 				<value>com.catb.model.Schedule</value>
+				<value>com.catb.model.LeaderSchedule</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
@@ -147,6 +148,9 @@
 	<bean id="scheduleDAO" class="com.catb.dao.impl.ScheduleDAOImpl">
 		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
 	</bean>
+	<bean id="leaderScheduleDAO" class="com.catb.dao.impl.LeaderScheduleDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
 	
 	<!-- Configuration of shiro filter for authentication and authorization -->
 	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
@@ -225,4 +229,7 @@
             </bean>
 	    </property>
 	</bean>
+	
+	<!-- <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    </bean> -->
 </beans>

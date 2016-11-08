@@ -286,4 +286,8 @@
 	<definition name="cm/schedule/add" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
 		<put-attribute name="content" value="/WEB-INF/views/cm/schedule/addSchedule.jsp"></put-attribute>
 	</definition>
+	
+	<definition name="cm/leaderschedule/add" template="/WEB-INF/views/tiles/cm/cmBaseLayout.jsp">
+		<put-attribute name="content" value="/WEB-INF/views/cm/schedule/addLeaderSchedule.jsp"></put-attribute>
+	</definition>
 </tiles-definitions>

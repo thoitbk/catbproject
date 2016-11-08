@@ -1,7 +1,7 @@
 .excelDefaults {
+	background: linear-gradient(180deg, #FDE0A5 5%, #FFFFFF 100%) repeat scroll 0% 0% transparent !important;
 	font-family: "Times New Roman", Times, serif !important;
 	word-wrap: break-word;
-	background-color: white;
 	color: black;
 	text-decoration: none;
 	direction: ltr;
@@ -27,6 +27,15 @@
 	font-weight: normal;
 	font-size: 10pt;
 	text-align: right;
+}
+
+.mark {
+	position: relative;
+   	left: 80%;
+   	color: red;
+   	font-weight: bold;
+   	font-style: italic;
+   	width: 100%;
 }
 
 .excelDefaults td {

@@ -8,11 +8,6 @@ import org.apache.poi.ss.usermodel.CellStyle;
 
 import java.util.Formatter;
 
-/**
-* Implementation of {@link HtmlHelper} for HSSF files.
-*
-* @author Ken Arnold, Industrious Media LLC
-*/
 public class HSSFHtmlHelper implements HtmlHelper {
  private final HSSFWorkbook wb;
  private final HSSFPalette colors;

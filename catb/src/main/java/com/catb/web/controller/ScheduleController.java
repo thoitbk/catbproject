@@ -1,5 +1,9 @@
 package com.catb.web.controller;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -8,13 +12,19 @@ import java.util.LinkedList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.apache.commons.io.FilenameUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,13 +34,21 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
 import com.catb.bo.DepartmentBO;
+import com.catb.bo.LeaderScheduleBO;
 import com.catb.bo.ScheduleBO;
+import com.catb.common.Constants;
 import com.catb.common.PropertiesUtil;
+import com.catb.common.exception.AppException;
 import com.catb.model.Department;
+import com.catb.model.LeaderSchedule;
 import com.catb.model.Schedule;
+import com.catb.service.exceltohtml.ToHtml;
 import com.catb.vo.UserInfo;
 import com.catb.web.tag.PageInfo;
+import com.catb.web.util.DiacriticsRemover;
 import com.catb.web.util.Util;
+import com.catb.web.viewmodel.FileMeta;
+import com.catb.web.viewmodel.ScheduleFileViewModel;
 import com.catb.web.viewmodel.ScheduleInfo;
 import com.catb.web.viewmodel.ScheduleViewModel;
 
@@ -42,6 +60,9 @@ public class ScheduleController {
 	
 	@Autowired
 	private DepartmentBO departmentBO;
+	
+	@Autowired
+	private LeaderScheduleBO leaderScheduleBO;
 	
 	private static final String[] DAYS_IN_WEEK = {"Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7", "Chủ nhật"};
 	
@@ -226,5 +247,142 @@ public class ScheduleController {
 		}
 		
 		return new ModelAndView("schedule/show");
+	}
+	
+	@RequiresPermissions(value = {"leaderschedule:manage"})
+	@RequestMapping(value = "/cm/leaderschedule/add", method = RequestMethod.GET)
+	public ModelAndView showCreateLeaderSchedule(ModelMap modelMap, HttpServletRequest request) {
+		ScheduleFileViewModel scheduleFileViewModel = new ScheduleFileViewModel();
+		modelMap.addAttribute("scheduleFileViewModel", scheduleFileViewModel);
+		
+		LeaderSchedule leaderSchedule = leaderScheduleBO.getLeaderSchedule();
+		modelMap.addAttribute("leaderSchedule", leaderSchedule);
+		
+		return new ModelAndView("cm/leaderschedule/add");
+	}
+	
+	@SuppressWarnings("unchecked")
+	@RequiresPermissions(value = {"leaderschedule:manage"})
+	@RequestMapping(value = "/cm/leaderschedule/add", method = RequestMethod.POST)
+	public ModelAndView processCreateLeaderSchedule(
+			@ModelAttribute("scheduleFileViewModel") ScheduleFileViewModel scheduleFileViewModel,
+			BindingResult bindingResult, ModelMap modelMap,
+			HttpServletRequest request, HttpServletResponse response) {
+		
+		List<FileMeta> files = new LinkedList<FileMeta>();
+		boolean isMultipart = ServletFileUpload.isMultipartContent(request);
+		FileMeta temp = null;
+		String title = "";
+		
+		if (isMultipart) {
+			DiskFileItemFactory factory = new DiskFileItemFactory();
+			ServletFileUpload upload = new ServletFileUpload(factory);
+			
+			try {
+				List<FileItem> items = upload.parseRequest(request);
+				
+				for (FileItem item : items) {
+					if (item.isFormField()) {
+						title = item.getString("UTF-8");
+					} else {
+						String directory = Constants.SCHEDULE_LOCATION;
+						String fileName = item.getName();
+						if (fileName == null || fileName.isEmpty()) {
+							LeaderSchedule leaderSchedule = leaderScheduleBO.getLeaderSchedule();
+							modelMap.addAttribute("leaderSchedule", leaderSchedule);
+							
+							bindingResult.addError(new ObjectError("file", "Chưa chọn file"));
+							
+							return new ModelAndView("cm/leaderschedule/add");
+						}
+						String path = directory + File.separator + fileName;
+						File file = createFile(directory, fileName);
+						item.write(file);
+						temp = new FileMeta(
+								"1", fileName, String.valueOf(item.getSize() / 1024), 
+								item.getContentType(), path);
+						files.add(temp);
+					}
+				}
+				
+				if (files.size() > 0) {
+					FileMeta fileMeta = files.get(0);
+					String extension = FilenameUtils.getExtension(fileMeta.getFileName());
+					if (!extension.equalsIgnoreCase("xls") && !extension.equalsIgnoreCase("xlsx")) {
+						LeaderSchedule leaderSchedule = leaderScheduleBO.getLeaderSchedule();
+						modelMap.addAttribute("leaderSchedule", leaderSchedule);
+						
+						bindingResult.addError(new ObjectError("file", "Không phải file excel"));
+						
+						return new ModelAndView("cm/leaderschedule/add");
+					} 
+					String content = ToHtml.toHtml(fileMeta.getPath());
+					if (title.isEmpty()) {
+						title = "Lịch công tác lãnh đạo Công an tỉnh";
+					}
+					LeaderSchedule leaderSchedule = new LeaderSchedule(title, fileMeta.getFileName(), fileMeta.getPath(), fileMeta.getFileType(), content);
+					leaderScheduleBO.addLeaderSchedule(leaderSchedule);
+				}
+				
+			} catch (Exception ex) {
+				throw new AppException(ex);
+			}
+		}
+		
+		request.getSession().setAttribute("msg", PropertiesUtil.getProperty("leaderschedule.created.successfully"));
+		
+		return new ModelAndView(new RedirectView(request.getContextPath() + "/cm/leaderschedule/add"));
+	}
+	
+	private File createFile(String dirName, String fileName) {
+		File dir = new File(dirName);
+		if (!dir.exists()) {
+			dir.mkdir();
+		}
+		
+		String absolutePath = dirName + File.separator + fileName;
+		File file = new File(absolutePath);
+		
+		return file;
+	}
+	
+	@RequestMapping(value = "/lich-lanh-dao", method = RequestMethod.GET)
+	public ModelAndView showLeaderSchedule(ModelMap modelMap) {
+		LeaderSchedule schedule = leaderScheduleBO.getLeaderSchedule();
+		modelMap.addAttribute("leaderSchedule", schedule);
+		
+		return new ModelAndView("leaderschedule/show");
+	}
+	
+	@RequestMapping(value = "/tai-lich-lanh-dao", method = RequestMethod.GET)
+	public void downloadLeaderSchedule(HttpServletResponse response) throws IOException {
+		LeaderSchedule schedule = leaderScheduleBO.getLeaderSchedule();
+		if (schedule != null) {
+			String path = schedule.getPath();
+			response.setContentType(schedule.getMime() + "; charset=UTF-8");
+			response.setCharacterEncoding("UTF-8");
+			
+			String fileName = schedule.getName();
+			String extension = FilenameUtils.getExtension(fileName);
+			String baseName = FilenameUtils.getBaseName(fileName);
+			String friendlyFileName = DiacriticsRemover.toFriendlyUrl(baseName);
+			String newFileName = friendlyFileName + "." + extension;
+			
+			response.setHeader("Content-Disposition", "attachment;filename=\"" + newFileName + "\"");
+			File f = new File(schedule.getPath());
+			if (f.exists()) {
+				FileInputStream fis = new FileInputStream(f);
+				OutputStream os = response.getOutputStream();
+				byte[] buffer = new byte[1024 * 1024];
+				int readByte = -1;
+				
+				while ((readByte = fis.read(buffer)) != -1) {
+					os.write(buffer, 0, readByte);
+				}
+				
+				os.close();
+				fis.close();
+			}
+		}
 	}
 }

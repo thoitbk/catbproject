@@ -157,22 +157,20 @@ public class ToHtml {
                     "unknown workbook type: " + wb.getClass().getSimpleName());
     }
 
-    /**
-     * Run this class as a program
-     *
-     * @param args The command line arguments.
-     *
-     * @throws Exception Exception we don't recover from.
-     */
     public static void main(String[] args) throws Exception {
-//        if(args.length < 2){
-//            System.err.println("usage: ToHtml inputWorkbook outputHtmlFile");
-//            return;
-//        }
-
         ToHtml toHtml = create("D:\\12.xlsx", new PrintWriter(new FileWriter("D:\\12.html")));
-        toHtml.setCompleteHTML(true);
+        toHtml.setCompleteHTML(false);
         toHtml.printPage();
+    }
+    
+    
+    public static String toHtml(String input) throws Exception {
+    	StringBuffer buffer = new StringBuffer();
+    	ToHtml toHtml = create(input, buffer);
+        toHtml.setCompleteHTML(false);
+        toHtml.printPage();
+        
+        return buffer.toString();
     }
 
     public void setCompleteHTML(boolean completeHTML) {
@@ -191,7 +189,8 @@ public class ToHtml {
             }
 
             print();
-
+            out.format("<div class='mark'>Developed by THƠ-IT-BKHN</div>");
+            
             if (completeHTML) {
                 out.format("</body>%n");
                 out.format("</html>%n");

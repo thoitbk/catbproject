@@ -10,7 +10,6 @@ import java.util.Formatter;
 * interface, and then implement it for both HSSF and XSSF workbooks, letting
 * the driving code stay independent of format.
 *
-* @author Ken Arnold, Industrious Media LLC
 */
 public interface HtmlHelper {
  /**

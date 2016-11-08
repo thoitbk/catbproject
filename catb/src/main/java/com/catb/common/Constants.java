@@ -16,6 +16,7 @@ public class Constants {
 	public static String NEWS_STATUSES_CONFIG_FILE;
 	// Logical path of directory storing uploaded images
 	public static String NEWS_IMAGE_LOCATION;
+	public static String SCHEDULE_LOCATION;
 	// Relative path of uploaded images
 	public static String NEWS_IMAGE_PATH;
 	// Number of page links generated
@@ -59,6 +60,7 @@ public class Constants {
 			NUMBER_OF_PAGE_LINK = config.getInt("NUMBER_OF_PAGE_LINK");
 			ADMINISTRATIVE_PROCEDURE_LOCATION = config.getString("ADMINISTRATIVE_PROCEDURE_LOCATION");
 			DOCUMENT_LOCATION = config.getString("DOCUMENT_LOCATION");
+			SCHEDULE_LOCATION = config.getString("SCHEDULE_LOCATION");
 			IMAGE_LOCATION = config.getString("IMAGE_LOCATION");
 			IMAGE_URL = config.getString("IMAGE_URL");
 			VIDEO_LOCATION = config.getString("VIDEO_LOCATION");
