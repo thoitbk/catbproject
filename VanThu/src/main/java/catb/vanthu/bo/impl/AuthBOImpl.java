@@ -20,7 +20,6 @@ public class AuthBOImpl implements AuthBO {
 	@Autowired
 	private UserDAO userDAO;
 	
-	@Override
 	public User findUserByUsername(String username) {
 		catb.vanthu.model.User user = userDAO.findUserByUsername(username);
 		if (user != null) {

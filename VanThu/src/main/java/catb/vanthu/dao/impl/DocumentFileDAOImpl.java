@@ -13,7 +13,6 @@ public class DocumentFileDAOImpl implements DocumentFileDAO {
 	
 	static Logger logger = Logger.getLogger(DocumentFileDAOImpl.class.getName());
 	
-	@Override
 	public DocumentFile getDocumentFileById(Integer fileId) {
 		Session session = null;
 		try {

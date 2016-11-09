@@ -14,7 +14,6 @@ public class DocumentNumberResetJob implements Job {
 	
 	private DocumentNumberTrackerBO documentNumberTrackerBO = new DocumentNumberTrackerBOImpl(); 
 	
-	@Override
 	public void execute(JobExecutionContext context) throws JobExecutionException {
 		try {
 			documentNumberTrackerBO.updateDocumentNumber(0);

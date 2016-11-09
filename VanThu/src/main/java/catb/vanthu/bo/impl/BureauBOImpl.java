@@ -15,7 +15,6 @@ public class BureauBOImpl implements BureauBO {
 	@Autowired
 	private BureauDAO bureauDAO;
 	
-	@Override
 	public List<Bureau> getBureaus() {
 		return bureauDAO.getBureaus();
 	}

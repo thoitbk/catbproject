@@ -13,7 +13,6 @@ public class DocumentFileBOImpl implements DocumentFileBO {
 	@Autowired
 	private DocumentFileDAO documentFileDAO;
 	
-	@Override
 	public DocumentFile getDocumentFileById(Integer fileId) {
 		return documentFileDAO.getDocumentFileById(fileId);
 	}

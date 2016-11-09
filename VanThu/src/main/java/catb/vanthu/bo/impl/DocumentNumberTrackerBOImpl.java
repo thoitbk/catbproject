@@ -12,22 +12,18 @@ public class DocumentNumberTrackerBOImpl implements DocumentNumberTrackerBO {
 	@Autowired
 	private DocumentNumberTrackerDAO documentNumberTrackerDAO;
 	
-	@Override
 	public Integer getDocumentNumber() {
 		return documentNumberTrackerDAO.getDocumentNumber(0);
 	}
 
-	@Override
 	public void updateDocumentNumber(Integer n) {
 		documentNumberTrackerDAO.updateDocumentNumber(n, 0);
 	}
 
-	@Override
 	public Integer getComingDocumentNumber() {
 		return documentNumberTrackerDAO.getDocumentNumber(1);
 	}
 
-	@Override
 	public void updateComingDocumentNumber(Integer n) {
 		documentNumberTrackerDAO.updateDocumentNumber(n, 1);
 	}

@@ -12,12 +12,10 @@ import catb.vanthu.viewmodel.UserChangeInfoViewModel;
 
 public class UserChangeInfoValidator implements Validator {
 
-	@Override
 	public boolean supports(Class<?> clazz) {
 		return UserChangeInfoViewModel.class.isAssignableFrom(clazz);
 	}
 
-	@Override
 	public void validate(Object target, Errors errors) {
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "required.name");
 		

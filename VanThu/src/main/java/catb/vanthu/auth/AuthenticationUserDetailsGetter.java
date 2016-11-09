@@ -13,7 +13,6 @@ public class AuthenticationUserDetailsGetter implements UserDetailsService {
 	@Autowired
 	private AuthBO authBO;
 
-	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		User user = authBO.findUserByUsername(username);
 		if (user == null) {

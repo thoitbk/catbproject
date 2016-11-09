@@ -34,7 +34,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	static Logger logger = Logger.getLogger(DocumentDAOImpl.class.getName());
 	
 	@SuppressWarnings("unchecked")
-	@Override
 	public void saveDocument(Document document, Integer documentTypeId,
 			List<Integer> senderIds, List<Integer> receiverIds) {
 		Session session = null;
@@ -95,7 +94,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public Document getDocumentBySign(String sign) {
 		Session session = null;
 		try {
@@ -125,7 +123,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<Document> getDocuments(
 			SimpleSearchDocumentVO simpleSearchDocumentVO, int page,
 			int pageSize) {
@@ -190,7 +187,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 	
 	@SuppressWarnings("unchecked")
-	@Override
 	public Integer countDocuments(SimpleSearchDocumentVO simpleSearchDocumentVO) {
 		Session session = null;
 		try {
@@ -217,7 +213,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 		}
 	}
 
-	@Override
 	public Document getDocumentById(Integer documentId) {
 		Session session = null;
 		try {
@@ -249,7 +244,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<Document> getDocuments(
 			ComplexSearchDocumentsVO complexSearchDocumentsVO, int page,
 			int pageSize) {
@@ -332,7 +326,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 	
 	@SuppressWarnings("unchecked")
-	@Override
 	public Integer countDocuments(ComplexSearchDocumentsVO complexSearchDocumentsVO) {
 		Session session = null;
 		try {
@@ -360,7 +353,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 	
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<Document> getOutboundDocuments(
 			SimpleSearchDocumentVO simpleSearchDocumentVO,
 			Integer departmentId, int page, int pageSize) {
@@ -401,7 +393,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public Integer countOutboundDocuments(
 			SimpleSearchDocumentVO simpleSearchDocumentVO, Integer departmentId) {
 		Session session = null;
@@ -432,7 +423,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public Boolean checkUserHavePermissionToOutboundFile(Integer departmentId,
 			Integer fileId) {
 		Session session = null;
@@ -464,7 +454,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public Boolean checkUserHavePermissionToOutboundDocument(
 			Integer departmentId, Integer documentId) {
 		Session session = null;
@@ -496,7 +485,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 	
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<Document> getOutboundDocuments(
 			ComplexSearchOutboundDocumentsVO complexSearchOutboundDocumentsVO,
 			Integer departmentId, int page, int pageSize) {
@@ -535,7 +523,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public Integer countOutboundDocuments(
 			ComplexSearchOutboundDocumentsVO complexSearchOutboundDocumentsVO,
 			Integer departmentId) {
@@ -643,7 +630,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 	
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<Document> getInboundDocuments(SimpleSearchDocumentVO simpleSearchDocumentVO, Integer departmentId, int page, int pageSize) {
 		Session session = null;
 		try {
@@ -681,7 +667,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public Integer countInboundDocuments(SimpleSearchDocumentVO simpleSearchDocumentVO, Integer departmentId) {
 		Session session = null;
 		try {
@@ -709,7 +694,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public Boolean checkUserHavePermissionToInboundFile(Integer departmentId, Integer fileId) {
 		Session session = null;
 		try {
@@ -740,7 +724,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public Boolean checkUserHavePermissionToInboundDocument(
 			Integer departmentId, Integer documentId) {
 		Session session = null;
@@ -771,7 +754,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 		}
 	}
 	
-	@Override
 	public void updateReadStatusOfDocument(Integer departmentId, Integer documentId, Date receiveTime, Boolean isRead) {
 		Session session = null;
 		try {
@@ -801,7 +783,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<Document> getInboundDocuments(
 			ComplexSearchInboundDocumentsVO complexSearchInboundDocumentsVO,
 			Integer departmentId, int page, int pageSize) {
@@ -841,7 +822,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public Integer countInboundDocuments(
 			ComplexSearchInboundDocumentsVO complexSearchInboundDocumentsVO,
 			Integer departmentId) {
@@ -919,7 +899,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<Document> getUnreadDocuments(Integer departmentId) {
 		Session session = null;
 		try {
@@ -953,7 +932,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 		}
 	}
 
-	@Override
 	public void updateSendStatusOfDocument(Integer documentId,
 			Boolean isMailSent) {
 		Session session = null;
@@ -982,7 +960,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public Boolean checkSignExistInYear(String sign, Integer year) {
 		Session session = null;
 		try {
@@ -1013,7 +990,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public Boolean checkNumberExistInYear(Integer number, Integer year) {
 		Session session = null;
 		try {
@@ -1042,7 +1018,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 		}
 	}
 
-	@Override
 	public void deleteDocument(Integer documentId) {
 		Session session = null;
 		try {
@@ -1068,7 +1043,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public Boolean checkSignExistInYear(String sign, Integer year,
 			String currentSign) {
 		Session session = null;
@@ -1101,7 +1075,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public Boolean checkNumberExistInYear(Integer number, Integer year,
 			Integer currentNumber) {
 		Session session = null;
@@ -1132,7 +1105,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public void updateDocument(Document document, Integer documentTypeId,
 			List<Integer> senderIds, List<Integer> receiverIds) {
 		Session session = null;
@@ -1241,7 +1213,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<Document> getDocuments(
 			SimpleSearchDocumentVO simpleSearchDocumentVO) {
 		Session session = null;
@@ -1273,7 +1244,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<Document> getDocuments(
 			ComplexSearchDocumentsVO complexSearchDocumentsVO) {
 		Session session = null;
@@ -1308,7 +1278,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<Document> getOutboundDocuments(
 			SimpleSearchDocumentVO simpleSearchDocumentsVO, Integer departmentId) {
 		Session session = null;
@@ -1346,7 +1315,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<Document> getOutboundDocuments(
 			ComplexSearchOutboundDocumentsVO complexSearchOutboundDocumentsVO,
 			Integer departmentId) {
@@ -1383,7 +1351,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<Document> getInboundDocuments(
 			SimpleSearchDocumentVO simpleSearchDocumentsVO, Integer departmentId) {
 		Session session = null;
@@ -1420,7 +1387,6 @@ public class DocumentDAOImpl implements DocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<Document> getInboundDocuments(
 			ComplexSearchInboundDocumentsVO complexSearchInboundDocumentVO,
 			Integer departmentId) {

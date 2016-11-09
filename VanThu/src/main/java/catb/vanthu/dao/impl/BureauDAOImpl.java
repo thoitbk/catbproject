@@ -18,7 +18,6 @@ public class BureauDAOImpl implements BureauDAO {
 	static Logger logger = Logger.getLogger(BureauDAOImpl.class.getCanonicalName());
 	
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<Bureau> getBureaus() {
 		Session session = null;
 		try {

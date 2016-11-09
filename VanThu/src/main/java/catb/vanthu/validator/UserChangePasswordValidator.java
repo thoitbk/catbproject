@@ -15,12 +15,10 @@ public class UserChangePasswordValidator implements Validator {
 	@Autowired
 	private UserBO userBO;
 	
-	@Override
 	public boolean supports(Class<?> clazz) {
 		return UserChangePasswordViewModel.class.isAssignableFrom(clazz);
 	}
 
-	@Override
 	public void validate(Object target, Errors errors) {
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "oldPassword", "oldPassword.required");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "newPassword", "newPassword.required");

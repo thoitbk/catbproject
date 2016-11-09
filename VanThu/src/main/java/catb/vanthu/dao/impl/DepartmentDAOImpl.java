@@ -97,7 +97,6 @@ public class DepartmentDAOImpl implements DepartmentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<Department> getDepartments(Boolean isInBureau) {
 		Session session = null;
 		try {
@@ -127,7 +126,6 @@ public class DepartmentDAOImpl implements DepartmentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<Department> getDepartments(int page, int pageSize) {
 		Session session = null;
 		try {
@@ -158,7 +156,6 @@ public class DepartmentDAOImpl implements DepartmentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<Department> getDepartments() {
 		Session session = null;
 		try {
@@ -187,7 +184,6 @@ public class DepartmentDAOImpl implements DepartmentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public Department getDepartmentByCode(String code) {
 		Session session = null;
 		try {
@@ -216,7 +212,6 @@ public class DepartmentDAOImpl implements DepartmentDAO {
 		}
 	}
 
-	@Override
 	public Department findDepartmentById(Integer id) {
 		Session session = null;
 		try {
@@ -243,7 +238,6 @@ public class DepartmentDAOImpl implements DepartmentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<Department> getDepartments(List<Integer> departmentIds) {
 		Session session = null;
 		try {
@@ -279,7 +273,6 @@ public class DepartmentDAOImpl implements DepartmentDAO {
 		}
 	}
 
-	@Override
 	public void saveDepartment(Department department, Integer bureauId) {
 		Session session = null;
 		try {
@@ -304,7 +297,6 @@ public class DepartmentDAOImpl implements DepartmentDAO {
 		}
 	}
 
-	@Override
 	public void updateDepartment(Department department, Integer bureauId) {
 		Session session = null;
 		try {

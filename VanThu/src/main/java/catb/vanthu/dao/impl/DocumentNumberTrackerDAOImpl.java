@@ -14,7 +14,6 @@ public class DocumentNumberTrackerDAOImpl implements DocumentNumberTrackerDAO {
 	
 	static Logger logger = Logger.getLogger(DocumentNumberTrackerDAOImpl.class.getCanonicalName());
 	
-	@Override
 	public Integer getDocumentNumber(Integer id) {
 		Session session = null;
 		try {
@@ -45,7 +44,6 @@ public class DocumentNumberTrackerDAOImpl implements DocumentNumberTrackerDAO {
 		}
 	}
 
-	@Override
 	public void updateDocumentNumber(Integer n, Integer id) {
 		Session session = null;
 		try {

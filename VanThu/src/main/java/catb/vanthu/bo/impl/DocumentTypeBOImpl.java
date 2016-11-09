@@ -15,27 +15,22 @@ public class DocumentTypeBOImpl implements DocumentTypeBO {
 	@Autowired
 	private DocumentTypeDAO documentTypeDAO;
 	
-	@Override
 	public List<DocumentType> getDocumentTypes() {
 		return documentTypeDAO.getDocumentTypes();
 	}
 
-	@Override
 	public DocumentType getDocumentTypeByName(String name) {
 		return documentTypeDAO.getDocumentTypeByName(name);
 	}
 
-	@Override
 	public void saveDocumentType(DocumentType documentType) {
 		documentTypeDAO.saveDocumentType(documentType);
 	}
 
-	@Override
 	public void updateDocumentType(Integer id, String name) {
 		documentTypeDAO.updateDocumentType(id, name);
 	}
 
-	@Override
 	public void deleteDocumentType(Integer id) {
 		documentTypeDAO.deleteDocumentType(id);
 	}

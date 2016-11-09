@@ -17,7 +17,6 @@ public class DocumentTypeDAOImpl implements DocumentTypeDAO {
 	static Logger logger = Logger.getLogger(DocumentTypeDAOImpl.class.getName());
 	
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<DocumentType> getDocumentTypes() {
 		Session session = null;
 		try {
@@ -46,7 +45,6 @@ public class DocumentTypeDAOImpl implements DocumentTypeDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public DocumentType getDocumentTypeByName(String name) {
 		Session session = null;
 		try {
@@ -75,7 +73,6 @@ public class DocumentTypeDAOImpl implements DocumentTypeDAO {
 		}
 	}
 
-	@Override
 	public void saveDocumentType(DocumentType documentType) {
 		Session session = null;
 		try {
@@ -97,7 +94,6 @@ public class DocumentTypeDAOImpl implements DocumentTypeDAO {
 		}
 	}
 
-	@Override
 	public void updateDocumentType(Integer id, String name) {
 		Session session = null;
 		try {
@@ -124,7 +120,6 @@ public class DocumentTypeDAOImpl implements DocumentTypeDAO {
 		}
 	}
 
-	@Override
 	public void deleteDocumentType(Integer id) {
 		Session session = null;
 		try {

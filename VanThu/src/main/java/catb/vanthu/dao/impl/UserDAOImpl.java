@@ -44,7 +44,6 @@ public class UserDAOImpl implements UserDAO {
 	}
 	
 	@SuppressWarnings("unchecked")
-	@Override
 	public User findUserByUsername(String username) {
 		Session session = null;
 		try {
@@ -80,7 +79,6 @@ public class UserDAOImpl implements UserDAO {
 		}
 	}
 
-	@Override
 	public void updateUser(User user) {
 		Session session = null;
 		try {
@@ -111,7 +109,6 @@ public class UserDAOImpl implements UserDAO {
 		}
 	}
 
-	@Override
 	public void updateUserPassword(Integer id, String password) {
 		Session session = null;
 		try {
@@ -141,7 +138,6 @@ public class UserDAOImpl implements UserDAO {
 	}
 	
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<User> getAllUsers() {
 		Session session = null;
 		try {
@@ -173,7 +169,6 @@ public class UserDAOImpl implements UserDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<User> getUsers(int page, int pageSize) {
 		Session session = null;
 		try {
@@ -208,7 +203,6 @@ public class UserDAOImpl implements UserDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public User findUserById(Integer id) {
 		Session session = null;
 		try {
@@ -242,7 +236,6 @@ public class UserDAOImpl implements UserDAO {
 		}
 	}
 
-	@Override
 	public void updateUser(User user, Integer departmentId) {
 		Session session = null;
 		try {
@@ -294,7 +287,6 @@ public class UserDAOImpl implements UserDAO {
 		}
 	}*/
 	
-	@Override
 	public void deleteUser(Integer id) {
 		Session session = null;
 		try {
@@ -319,7 +311,6 @@ public class UserDAOImpl implements UserDAO {
 		}
 	}
 
-	@Override
 	public void saveUser(User user, Integer departmentId) {
 		Session session = null;
 		try {
@@ -347,7 +338,6 @@ public class UserDAOImpl implements UserDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public SearchUserResult getUsers(SearchUserVO searchUserVO, int page, int pageSize) {
 		Session session = null;
 		try {

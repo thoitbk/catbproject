@@ -13,7 +13,6 @@ public class ComingDocumentFileBOImpl implements ComingDocumentFileBO {
 	@Autowired
 	private ComingDocumentFileDAO comingDocumentFileDAO;
 	
-	@Override
 	public ComingDocumentFile getComingDocumentFileById(Integer id) {
 		return comingDocumentFileDAO.getComingDocumentFileById(id);
 	}

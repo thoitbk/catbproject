@@ -13,7 +13,6 @@ public class ComingDocumentFileDAOImpl implements ComingDocumentFileDAO {
 	
 	static Logger logger = Logger.getLogger(ComingDocumentFileDAOImpl.class.getCanonicalName());
 	
-	@Override
 	public ComingDocumentFile getComingDocumentFileById(Integer id) {
 		Session session = null;
 		try {

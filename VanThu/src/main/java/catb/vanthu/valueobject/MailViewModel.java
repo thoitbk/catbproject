@@ -73,7 +73,6 @@ public class MailViewModel implements Comparable<MailViewModel> {
 		this.size = size;
 	}
 
-	@Override
 	public int compareTo(MailViewModel o) {
 		if (o == null || this.sentDate == null || o.sentDate == null) return 0;
 		Date s = o.sentDate;

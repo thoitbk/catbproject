@@ -18,12 +18,10 @@ public class UpdateDepartmentValidator implements Validator {
 	@Autowired
 	private DepartmentBO departmentBO;
 	
-	@Override
 	public boolean supports(Class<?> clazz) {
 		return UpdateDepartmentViewModel.class.isAssignableFrom(clazz);
 	}
 
-	@Override
 	public void validate(Object target, Errors errors) {
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "code", "code.required");
 		

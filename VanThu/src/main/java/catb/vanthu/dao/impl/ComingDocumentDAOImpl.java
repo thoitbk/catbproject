@@ -29,7 +29,6 @@ public class ComingDocumentDAOImpl implements ComingDocumentDAO {
 	static Logger logger = Logger.getLogger(ComingDocumentDAOImpl.class.getCanonicalName());
 	
 	@SuppressWarnings("unchecked")
-	@Override
 	public Boolean checkSignExistInYear(String sign, Integer year) {
 		Session session = null;
 		try {
@@ -60,7 +59,6 @@ public class ComingDocumentDAOImpl implements ComingDocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public void saveComingDocument(ComingDocument comingDocument,
 			Integer documentTypeId, List<Integer> senderIds) {
 		Session session = null;
@@ -107,7 +105,6 @@ public class ComingDocumentDAOImpl implements ComingDocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<ComingDocument> getComingDocuments(
 			SimpleSearchDocumentVO simpleSearchDocumentVO, Integer page,
 			Integer pageSize) {
@@ -172,7 +169,6 @@ public class ComingDocumentDAOImpl implements ComingDocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public Integer countComingDocuments(
 			SimpleSearchDocumentVO simpleSearchDocumentVO) {
 		Session session = null;
@@ -200,7 +196,6 @@ public class ComingDocumentDAOImpl implements ComingDocumentDAO {
 		}
 	}
 
-	@Override
 	public ComingDocument getComingDocumentById(Integer id) {
 		Session session = null;
 		try {
@@ -230,7 +225,6 @@ public class ComingDocumentDAOImpl implements ComingDocumentDAO {
 		}
 	}
 
-	@Override
 	public void deleteComingDocument(Integer id) {
 		Session session = null;
 		try {
@@ -256,7 +250,6 @@ public class ComingDocumentDAOImpl implements ComingDocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public Boolean checkSignExistInYear(String sign, Integer year,
 			String currentSign) {
 		Session session = null;
@@ -289,7 +282,6 @@ public class ComingDocumentDAOImpl implements ComingDocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public void updateComingDocument(ComingDocument comingDocument,
 			Integer documentTypeId, List<Integer> senderIds) {
 		Session session = null;
@@ -357,7 +349,6 @@ public class ComingDocumentDAOImpl implements ComingDocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<ComingDocument> getComingDocuments(
 			ComplexSearchComingDocumentsVO complexSearchComingDocumentsVO,
 			Integer page, Integer pageSize) {
@@ -433,7 +424,6 @@ public class ComingDocumentDAOImpl implements ComingDocumentDAO {
 	}
 	
 	@SuppressWarnings("unchecked")
-	@Override
 	public Integer countComingDocuments(
 			ComplexSearchComingDocumentsVO complexSearchComingDocumentsVO) {
 		Session session = null;
@@ -462,7 +452,6 @@ public class ComingDocumentDAOImpl implements ComingDocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<ComingDocument> getComingDocuments(
 			SimpleSearchDocumentVO simpleSearchDocumentVO) {
 		Session session = null;
@@ -498,7 +487,6 @@ public class ComingDocumentDAOImpl implements ComingDocumentDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<ComingDocument> getComingDocuments(
 			ComplexSearchComingDocumentsVO complexSearchComingDocumentsVO) {
 		Session session = null;

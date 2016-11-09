@@ -17,7 +17,6 @@ public class ContextListener implements ServletContextListener {
 	
 	static Logger logger = Logger.getLogger(ContextListener.class.getCanonicalName());
 	
-	@Override
 	public void contextDestroyed(ServletContextEvent event) {
 		MailReceiver.closeMailBox();
 		ServletContext context = event.getServletContext();
@@ -28,7 +27,6 @@ public class ContextListener implements ServletContextListener {
 		logger.info(">>> Stop web application\n");
 	}
 
-	@Override
 	public void contextInitialized(ServletContextEvent event) {
 		PropertyConfigurator.configure(this.getClass().getClassLoader().getResource("log4j.properties"));
 		logger.info("\n>>> Start web application ...");

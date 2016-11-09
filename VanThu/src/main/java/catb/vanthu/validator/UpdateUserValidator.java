@@ -18,12 +18,10 @@ public class UpdateUserValidator implements Validator {
 	@Autowired
 	private UserBO userBO;
 	
-	@Override
 	public boolean supports(Class<?> clazz) {
 		return UpdateUserViewModel.class.isAssignableFrom(clazz);
 	}
 
-	@Override
 	public void validate(Object target, Errors errors) {
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "required.username");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "required.name");
