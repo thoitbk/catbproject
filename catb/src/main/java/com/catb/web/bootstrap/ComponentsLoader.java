@@ -82,6 +82,7 @@ public class ComponentsLoader {
 			Util.createFolder(Constants.NEWS_IMAGE_LOCATION);
 			Util.createFolder(Constants.IMAGE_LOCATION);
 			Util.createFolder(Constants.VIDEO_LOCATION);
+			Util.createFolder(Constants.CONTACT_LOCATION);
 		}
 	}
 }

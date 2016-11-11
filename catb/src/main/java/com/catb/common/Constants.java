@@ -27,6 +27,9 @@ public class Constants {
 	public static String IMAGE_URL;
 	public static String VIDEO_LOCATION;
 	public static String VIDEO_URL;
+	public static String CONTACT_LOCATION;
+	public static String CONTACT_URL;
+	
 	public static String SMTP_HOST;
 	public static String SMTP_PORT;
 	public static String EMAIL_SENDER;
@@ -69,6 +72,8 @@ public class Constants {
 			SMTP_PORT = config.getString("SMTP_PORT");
 			EMAIL_SENDER = config.getString("EMAIL_SENDER");
 			EMAIL_SENDER_PASSWORD = config.getString("EMAIL_SENDER_PASSWORD");
+			CONTACT_LOCATION = config.getString("CONTACT_LOCATION");
+			CONTACT_URL = config.getString("CONTACT_URL");
 		} catch (ConfigurationException ex) {
 			logger.error("Loading configuration failed: ", ex);
 		}
