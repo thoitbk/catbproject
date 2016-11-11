@@ -22,30 +22,14 @@
 </script>
 
 <div id="Tin_Noi_Bat_C" class="main">
-	<div id="Tin_Noi_Bat_C_Chinh" class="Top_News">
-		<ul class="bxslider">
-			<c:forEach items="${hotNewses}" var="hotNews">
-				<li>
-					<c:choose>
-						<c:when test="${not empty hotNews.image}">
-							<c:set var="img" value="${hotNews.image}" scope="request"></c:set>
-						</c:when>
-						<c:otherwise>
-							<c:set var="img" value="${ct}/resources/images/default.png" scope="request"></c:set>
-						</c:otherwise>
-					</c:choose>
-					<a href='${news_ct}/${hotNews.newsCatalog.url}/${hotNews.id}/${f:toFriendlyUrl(hotNews.title)}'><img alt="" src="${img}" title="${hotNews.title}"></a>
-				</li>
-			</c:forEach>
-		</ul>
-	</div>
 	<div id="Tin_Noi_Bat_C_Khac" class="main">
 		<div class='TieuDe'>
 			<img alt="" src="${ct}/resources/images/hot_news.png" style="width: 20px; height: 20px; vertical-align: middle;" />
 			<span style="">Các tin nổi bật!</span>
 		</div>
 		<div class="hot_newses">
-			<ul class="marquee">
+			<marquee direction="up" scrollamount="2">
+			<ul>
 				<c:forEach items="${hotNewses}" var="hotNews">
 					<li>
 						<a href='${news_ct}/${hotNews.newsCatalog.url}/${hotNews.id}/${f:toFriendlyUrl(hotNews.title)}' >
@@ -58,6 +42,7 @@
 					</li>
 				</c:forEach>
 			</ul>
+			</marquee>
 		</div>
 	</div>
 	<div class="space5">

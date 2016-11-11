@@ -16,6 +16,9 @@
 			<link>/cm/newsCatalog/add</link>
 			<link>/cm/newsCatalog/update</link>
 		</menuItem>
+		<menuItem id="info_5">
+			<link>/cm/leaderschedule/add</link>
+		</menuItem>
 	</menu>
 	<menu id="doc">
 		<menuItem id="doc_1">

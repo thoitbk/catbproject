@@ -40,6 +40,12 @@
 							<a href="${ct}/cm/newsCatalog/add">Quản trị danh mục tin</a>
 						</li>
 					</shiro:hasPermission>
+					<shiro:hasPermission name="leaderschedule:manage">
+						<li id="info_5" class="${f:getMenuClass(menuItemId, 'info_5', 'selected_subitem')}">
+							<img src="${ct}/resources/images/book_f.gif" class="bullet_menu" />
+							<a href="${ct}/cm/leaderschedule/add">Quản trị lịch lãnh đạo</a>
+						</li>
+					</shiro:hasPermission>
 				</ul>
 			</li>
 		</s:hasAnyPermission>

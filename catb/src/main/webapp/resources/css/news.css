@@ -569,9 +569,9 @@ body
 	overflow: hidden;
 	display: block;
     float:left;
-	width: 62%;
+	width: 100%;
 	text-align:center;
-	margin-top: -16px;
+	margin-top: 0px;
 }
 #Tin_Noi_Bat_C_Chinh .NoiDung
 {
@@ -608,7 +608,7 @@ body
 #Tin_Noi_Bat_C_Chinh img
 {
 	width: 100%;
-	height: 300px;
+	height: 500px;
 }
 #Tin_Noi_Bat_C_Khac .TieuDe
 {
@@ -629,7 +629,7 @@ body
 {
 	margin: 0px;
 	padding:0px;
-	width: 37%;
+	width: 100%;
 	overflow: hidden;
 	display: block;
 	background-color: #FFFFFF;
@@ -2779,7 +2779,7 @@ span.star
 	text-align: justify;
 }
 
-#special_sites p .main_news_title, p a:link, p a:visited {
+#special_sites p .main_news_title {
 	color: #333;
 	font-size: 13px;
 	font-weight: 700;

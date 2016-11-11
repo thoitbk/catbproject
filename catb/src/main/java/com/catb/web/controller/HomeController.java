@@ -15,9 +15,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
+import com.catb.bo.ImageBO;
 import com.catb.bo.NewsBO;
 import com.catb.bo.UserBO;
+import com.catb.common.Constants;
 import com.catb.model.CommonInfo;
+import com.catb.model.Image;
 import com.catb.model.News;
 import com.catb.vo.SpecialSiteInfo;
 
@@ -29,6 +32,9 @@ public class HomeController {
 	
 	@Autowired
 	private NewsBO newsBO;
+	
+	@Autowired
+	private ImageBO imageBO;
 	
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String home(ModelMap model, HttpServletRequest request) {
@@ -47,6 +53,9 @@ public class HomeController {
 		
 		List<News> hotNewses = newsBO.getHotNewses(hotNewsSize);
 		model.addAttribute("hotNewses", hotNewses);
+		
+		List<Image> images = imageBO.getImages(Constants.IMAGE_AMOUNT);
+		model.addAttribute("images", images);
 		
 		return "home";
 	}

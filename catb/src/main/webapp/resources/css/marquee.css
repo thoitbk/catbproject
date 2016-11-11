@@ -11,7 +11,7 @@
 .marquee {
     position: relative;
     box-sizing: border-box;
-    animation: marquee 50s linear infinite;
+    animation: marquee 20s linear infinite;
 }
 
 .marquee:hover {

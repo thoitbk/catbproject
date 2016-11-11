@@ -29,6 +29,7 @@
 		</div>
 		<div class="space">
 		</div>
+		<span style="position: relative; left: 80%;"><a href="${ct}/thong-bao/${news.id}" target="_blank">Xem toàn màn hình</a></span>
 		<div id="Tin_Chi_Tiet_Khac">
 			<div class="TinCungChuDe">
 				${COMMONINFO.sameSubjectTitle}

@@ -8,7 +8,7 @@ public class CopyRightTag extends TagSupport {
 
 	private static final long serialVersionUID = 2095500907454578746L;
 	
-	private static final String COPYRIGHT = "Thiết kế và lập trình bởi <strong><a href='http://thoitbk.blogspot.com/' target='_blank' style='text-decoration: none; color: red;'>Trần Anh Thơ</a></strong> - Cán bộ Phòng Tham mưu Công an tỉnh Thái Bình";
+	private static final String COPYRIGHT = "Developed by <strong><a href='http://thoitbk.blogspot.com/' target='_blank' style='text-decoration: none; color: red;'>Trần Anh Thơ</a></strong> - CNTT BKHN";
 	
 	@Override
 	public int doStartTag() throws JspException {

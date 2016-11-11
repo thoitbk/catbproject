@@ -24,6 +24,17 @@
 			<embed wmode="transparent" src="${ct}/resources/images/khauhieu.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" height="85" width="730"></object>
 		</div>
 	</div>
+	
+	<div id="Tin_Noi_Bat_C_Chinh" class="Top_News">
+		<ul class="bxslider" style="width: 100%;">
+			<c:forEach items="${images}" var="image">
+				<li>
+					<img alt="" src="${image.file}" title="${image.caption}">
+				</li>
+			</c:forEach>
+		</ul>
+	</div>
+	
 	<c:if test="${fn:length(specialSiteInfos) > 0}">
 		<div id="special_sites">
 			<c:forEach begin="0" end="${fn:length(specialSiteInfos) - 1}" step="2" var="index">

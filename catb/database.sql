@@ -534,6 +534,24 @@ CREATE TABLE `video_catalog` (
 
 LOCK TABLES `permission` WRITE;
 /*!40000 ALTER TABLE `permission` DISABLE KEYS */;
-INSERT INTO `permission` VALUES (1,'Quảng cáo','ad:manage',''),(2,'Thủ tục hành chính','administrativeProcedure:manage',''),(3,'Bình luận','comment:manage',''),(4,'Cấu hình','configuration:manage',''),(5,'Tố giác tội phạm','criminalDenouncement:manage',''),(6,'Phòng ban','department:manage',''),(7,'Tài liệu','document:manage',''),(8,'Loại tài liệu','documentType:manage',''),(9,'Lĩnh vực','field:manage',''),(10,'Quyền','permission:assign',''),(11,'Vai trò','role:assign',''),(12,'Danh mục ảnh','imageCatalog:manage',''),(13,'Ảnh','image:manage',''),(14,'Link','link:manage',''),(15,'Mục tin','newsCatalog:manage',''),(16,'Tạo tin','news:create',''),(17,'Quản lý tin','news:manage',''),(18,'Duyệt tin','news:approve',''),(19,'Quản lý quyền','permission:manage',''),(20,'Vị trí','position:manage',''),(21,'Danh mục hỏi đáp','qaCatalog:manage',''),(22,'Quản lý vai trò','role:manage',''),(23,'Người dùng','user:manage',''),(24,'Sửa thông tin cá nhân','user:editSelf',''),(25,'Danh mục video','videoCatalog:manage',''),(26,'Video','video:manage','');
+INSERT INTO `permission` VALUES (1,'Quảng cáo','ad:manage',''),(2,'Thủ tục hành chính','administrativeProcedure:manage',''),(3,'Bình luận','comment:manage',''),(4,'Cấu hình','configuration:manage',''),(5,'Tố giác tội phạm','criminalDenouncement:manage',''),(6,'Phòng ban','department:manage',''),(7,'Tài liệu','document:manage',''),(8,'Loại tài liệu','documentType:manage',''),(9,'Lĩnh vực','field:manage',''),(10,'Quyền','permission:assign',''),(11,'Vai trò','role:assign',''),(12,'Danh mục ảnh','imageCatalog:manage',''),(13,'Ảnh','image:manage',''),(14,'Link','link:manage',''),(15,'Mục tin','newsCatalog:manage',''),(16,'Tạo tin','news:create',''),(17,'Quản lý tin','news:manage',''),(18,'Duyệt tin','news:approve',''),(19,'Quản lý quyền','permission:manage',''),(20,'Vị trí','position:manage',''),(21,'Danh mục hỏi đáp','qaCatalog:manage',''),(22,'Quản lý vai trò','role:manage',''),(23,'Người dùng','user:manage',''),(24,'Sửa thông tin cá nhân','user:editSelf',''),(25,'Danh mục video','videoCatalog:manage',''),(26,'Video','video:manage',''),(27,'lịch lãnh đạo','leaderschedule:manage','');
 /*!40000 ALTER TABLE `permission` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `leader_schedule`
+--
+
+DROP TABLE IF EXISTS `leader_schedule`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `leader_schedule` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(500) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `name` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `path` varchar(1000) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `mime` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `content` longtext COLLATE utf8_unicode_ci,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;

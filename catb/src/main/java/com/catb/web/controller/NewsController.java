@@ -480,4 +480,19 @@ public class NewsController {
 		
 		return new ModelAndView("showNewsDetails");
 	}
+	
+	@RequestMapping(value = "/thong-bao/{id}", method = RequestMethod.GET)
+	public ModelAndView viewFull(@PathVariable("id") Integer id, ModelMap model, HttpServletRequest request) {
+		News news = newsBO.fetchNewsByNewsId(id);
+		if (news == null) {
+			return new ModelAndView(new RedirectView(request.getContextPath() + "/notFound"));
+		}
+		
+		NewsContent content = news.getNewsContent();
+		
+		model.addAttribute("news", news);
+		model.addAttribute("content", content);
+		
+		return new ModelAndView("viewFull");
+	}
 }
