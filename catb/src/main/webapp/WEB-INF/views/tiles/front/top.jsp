@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="exTag" uri="/WEB-INF/tag/extags.tld" %>
 <div id="banner">
-	<img alt="" src="${ct}/resources/images/b.png" width="100%" height="100%" />
+	<img alt="" src="${ct}/resources/images/b.jpg" width="100%" height="100%" />
 	<%-- <embed width="100%" height="114" align="middle" src="${ct}/images/banner.swf" wmode="transparent"> --%>
 </div>
 <div>

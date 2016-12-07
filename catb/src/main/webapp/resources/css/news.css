@@ -30,7 +30,7 @@ body
 #wrapper
 {
 	
-	background:#FFF;
+	background: linear-gradient(180deg, #FDE0A5 5%, #FFFFFF 100%) repeat scroll 0% 0% transparent;
 	margin: 0 auto;
 	padding: 0 auto;
 	width: 1000px;
@@ -45,7 +45,7 @@ body
 }
 #pagecontents
 {
-	background: url( "Images/footer_divider.gif" ) repeat-x scroll center bottom transparent;
+	background-color: linear-gradient(180deg, #FDE0A5 5%, #FFFFFF 100%) repeat scroll 0% 0% transparent;
 	margin:auto;
 	padding:auto;
 	overflow:hidden;

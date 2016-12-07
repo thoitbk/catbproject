@@ -189,7 +189,7 @@ public class ToHtml {
             }
 
             print();
-            out.format("<div class='mark'>Developed by THƠ-IT-BKHN</div>");
+//            out.format("<div class='mark'>Developed by THƠ-IT-BKHN</div>");
             
             if (completeHTML) {
                 out.format("</body>%n");

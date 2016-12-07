@@ -21,14 +21,14 @@
 	});
 </script>
 
-<div id="Tin_Noi_Bat_C" class="main">
-	<div id="Tin_Noi_Bat_C_Khac" class="main">
+<div id="Tin_Noi_Bat_C" class="main" style="background-color: #FEEBC1">
+	<div id="Tin_Noi_Bat_C_Khac" class="main" style="background-color: #FEEBC1">
 		<div class='TieuDe'>
 			<img alt="" src="${ct}/resources/images/hot_news.png" style="width: 20px; height: 20px; vertical-align: middle;" />
 			<span style="">Các tin nổi bật!</span>
 		</div>
-		<div class="hot_newses">
-			<marquee direction="up" scrollamount="2">
+		<div class="hot_newses" style="background-color: #FEEBC1">
+			<marquee direction="up" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();">
 			<ul>
 				<c:forEach items="${hotNewses}" var="hotNews">
 					<li>

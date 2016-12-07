@@ -49,22 +49,33 @@
 		</div>
 	</div>
 </c:if>
-<div id="Lien_Ket_Web">
+<%-- <div id="Lien_Ket_Web">
 	<select name="linkSites" id="linkSites" class="ddl">
 		<option value="">------ Lịch công tác ------</option>
 		<c:forEach items="${DEPARTMENTS_LIST}" var="department">
 			<option value="${ct}/lich-cong-tac/?dId=${department.id}" class="blank">${department.code}</option>
 		</c:forEach>
 	</select>
-</div>
+</div> --%>
 
 <link href="${ct}/resources/css/jquery-ui-tab.css" rel="stylesheet" type="text/css" />
 
 <div id="tabs">
 	<ul>
-		<li><a href="#image_gallery">Ảnh</a></li>
 		<li><a href="#video_gallery">Video</a></li>
+		<li><a href="#image_gallery">Ảnh</a></li>
 	</ul>
+	<div id="video_gallery" style="padding-top: 5px;">
+		<div id="video_container" style="border: 1px solid #D0D0D0;">
+			
+		</div>
+		<div id="video_list">
+			
+		</div>
+		<div class="XemChiTiet">
+			<a href='${ct}/thu-vien-video' style="color: #FF0000">${COMMONINFO.detailsCaption}</a>
+		</div>
+	</div>
 	<div id="image_gallery" style="padding-top: 5px;">
 		<div class="image_container" style="border: 1px solid #D0D0D0;">
 			<div id="image_slider" style="display: none; position: relative; margin: 0 auto; width: 120px; height: 90px; overflow: hidden;">
@@ -89,23 +100,12 @@
 			<a href='${ct}/thu-vien-anh' style="color: #FF0000">${COMMONINFO.detailsCaption}</a>
 		</div>
 	</div>
-	<div id="video_gallery" style="padding-top: 5px;">
-		<div id="video_container" style="border: 1px solid #D0D0D0;">
-			
-		</div>
-		<div id="video_list">
-			
-		</div>
-		<div class="XemChiTiet">
-			<a href='${ct}/thu-vien-video' style="color: #FF0000">${COMMONINFO.detailsCaption}</a>
-		</div>
-	</div>
 </div>
 
 <script type="text/javascript">
 </script>
 
-<div id="Lien_Ket_Web">
+<%-- <div id="Lien_Ket_Web">
 	<select name="linkSites" id="linkSites" class="ddl">
 		<option value="">------ Liên kết website ------</option>
 		<c:forEach items="${LINK_LIST}" var="link">
@@ -124,7 +124,7 @@
 			</c:if>
 		</c:forEach>
 	</span>
-</div>
+</div> --%>
 <!-- <div id="Luot_Truy_Cap">
 	<div class='truycap'>Số lượt truy cập:<br /> </div>
 	<div class="space5">

@@ -33,6 +33,6 @@ $(document).ready(function() {
 	        var thang = d.getMonth() + 1;
 	        var nam = d.getFullYear();
 	        
-	        return "Hôm nay, " + thu + " ngày " + ngay + "/" + thang + "/" + nam;
+	        return thu + " ngày " + ngay + "/" + thang + "/" + nam;
 	}
 });
