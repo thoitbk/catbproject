@@ -24,6 +24,9 @@
 					<a href="${ct}/${column.url}" class="rightTopLink">${column.name}</a>
 				</li>
 			</c:forEach>
+			<li>
+				<a href="ftp://10.25.3.10" class="rightTopLink">Tải phần mềm và hướng dẫn</a>
+			</li>
 		</ul>
 	</div>
 </div>
