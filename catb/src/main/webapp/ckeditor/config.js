@@ -8,4 +8,10 @@ CKEDITOR.editorConfig = function( config ) {
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
 	config.removePlugins = 'save,uploadcare,forms,magicline,about';
+	config.tabSpaces = 4;
+	config.allowedContent = true;
+    config.pasteFromWordRemoveStyles = false;
+    config.pasteFromWordRemoveFontStyles = false;
+    config.pasteFromWordRemoveStyles = false;
+    config.fillEmptyBlocks = false;
 };

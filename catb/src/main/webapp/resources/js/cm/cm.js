@@ -407,24 +407,24 @@ $(document).ready(function() {
     });
     
     // Image management
-    $("#imageCatalogId").change(function () {
-    	var id = $(this).find('option:selected').val();
-    	if (id == null || id == '' || id < 0) {
-    		window.location.href = cp + '/cm/image/add';
-    	} else {
-    		window.location.href = cp + '/cm/image/add?cId=' + id;
-    	}
-    });
+//    $("#imageCatalogId").change(function () {
+//    	var id = $(this).find('option:selected').val();
+//    	if (id == null || id == '' || id < 0) {
+//    		window.location.href = cp + '/cm/image/add';
+//    	} else {
+//    		window.location.href = cp + '/cm/image/add?cId=' + id;
+//    	}
+//    });
     
     // Video management
-    $("#videoCatalogId").change(function () {
-    	var id = $(this).find('option:selected').val();
-    	if (id == null || id == '' || id < 0) {
-    		window.location.href = cp + '/cm/video/add';
-    	} else {
-    		window.location.href = cp + '/cm/video/add?cId=' + id;
-    	}
-    });
+//    $("#videoCatalogId").change(function () {
+//    	var id = $(this).find('option:selected').val();
+//    	if (id == null || id == '' || id < 0) {
+//    		window.location.href = cp + '/cm/video/add';
+//    	} else {
+//    		window.location.href = cp + '/cm/video/add?cId=' + id;
+//    	}
+//    });
     
     // ------------------------------- For delete functionalities ----------------------------------
     // select all checkboxs

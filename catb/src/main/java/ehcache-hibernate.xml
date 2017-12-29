@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ehcache name="hibernateCache">
-	<diskStore path="D://hibernateCache"/> 
+	<diskStore path="D://webdata//cache//hibernateCache"/> 
 	<defaultCache 
 	   	maxEntriesLocalHeap="10000" 
 	   	eternal="false" 
